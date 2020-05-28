@@ -1,0 +1,26 @@
+<ion-header mode="md">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button color="light" defaultHref="tabs/contact-us-tab"></ion-back-button>
+    </ion-buttons>
+    <ion-title color="light" class="ion-text-center ion-text-uppercase">
+      FAQ
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content mode="md">
+  <ion-grid>
+    <ion-row class="ion-justify-content-center">
+      <ion-col *ngFor="let faqTab of faqTabs" class="ion-no-marign ion-no-padding" size="auto">
+        <ion-button (click)="selectTab(faqTab)" [class.active]="faqTab.active"  
+          class="ion-no-padding ion-margin faq-btn no-ripple" fill="clear" color="medium" size="small">{{faqTab.name}}
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <app-faq-content [class.ion-hide]="selectedTabs.id !== 'paint-issues'"></app-faq-content>
+    <app-faq-content [class.ion-hide]="selectedTabs.id !== 'colors'"></app-faq-content>
+    <app-faq-content [class.ion-hide]="selectedTabs.id !== 'products'"></app-faq-content>
+    <app-faq-content [class.ion-hide]="selectedTabs.id !== 'app'"></app-faq-content>
+  </ion-grid>
+</ion-content>

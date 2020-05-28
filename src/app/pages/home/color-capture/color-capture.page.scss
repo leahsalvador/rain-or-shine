@@ -1,0 +1,41 @@
+.capture-container{
+    position: absolute;
+    width: 100%;
+    bottom: 25px;
+}
+ion-content{
+    height:100%;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#fffcfc+0,fffcfc+0,fffcfc+0,172a65+38&0+0,1+61 */
+    /*--ion-background: -moz-linear-gradient(top,  rgba(255,252,252,0) 0%, rgba(23,42,101,0.62) 38%, rgba(23,42,101,1) 61%) !important; /* FF3.6-15 */
+    /*--ion-background: -webkit-linear-gradient(top,  rgba(255,252,252,0) 0%,rgba(23,42,101,0.62) 38%,rgba(23,42,101,1) 61%) !important; /* Chrome10-25,Safari5.1-6 */
+    /*--ion-background: linear-gradient(to bottom,  rgba(255,252,252,0) 0%,rgba(23,42,101,0.62) 38%,rgba(23,42,101,1) 61%) !important; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    /*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00fffcfc', endColorstr='#172a65',GradientType=0 ) !important; /* IE6-9 */
+    /*--background: -moz-linear-gradient(top,  rgba(255,252,252,0) 0%, rgba(23,42,101,0.62) 38%, rgba(23,42,101,1) 61%) !important; /* FF3.6-15 */
+    /*--background: -webkit-linear-gradient(top,  rgba(255,252,252,0) 0%,rgba(23,42,101,0.62) 38%,rgba(23,42,101,1) 61%) !important; /* Chrome10-25,Safari5.1-6 */
+    /*--background: linear-gradient(to bottom,  rgba(255,252,252,0) 0%,rgba(23,42,101,0.62) 38%,rgba(23,42,101,1) 61%) !important; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    /*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00fffcfc', endColorstr='#172a65',GradientType=0 ) !important; /* IE6-9 */
+    /*background: -moz-linear-gradient(top,  rgba(255,252,252,0) 0%, rgba(23,42,101,0.62) 38%, rgba(23,42,101,1) 61%) !important; /* FF3.6-15 */
+    /*background: -webkit-linear-gradient(top,  rgba(255,252,252,0) 0%,rgba(23,42,101,0.62) 38%,rgba(23,42,101,1) 61%) !important; /* Chrome10-25,Safari5.1-6 */
+    /*background: linear-gradient(to bottom,  rgba(255,252,252,0) 0%,rgba(23,42,101,0.62) 38%,rgba(23,42,101,1) 61%) !important; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    /*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00fffcfc', endColorstr='#172a65',GradientType=0 ) !important; /* IE6-9 */
+    
+    --ion-background: linear-gradient(to bottom,  rgba(255,252,252,0) 0%,rgba(23,42,101,0.62) 38%,rgba(23,42,101,1) 61%) !important;
+    --background: linear-gradient(to bottom,  rgba(255,252,252,0) 0%,rgba(23,42,101,0.62) 38%,rgba(23,42,101,1) 61%) !important;
+    background: linear-gradient(to bottom,  rgba(255,252,252,0) 0%,rgba(23,42,101,0.62) 38%,rgba(23,42,101,1) 61%) !important;
+    background-image: url('../../../../assets/banner/Home-Banner.jpg') !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: top !important;
+    background-attachment: fixed !important;
+}
+
+#title{
+    color: #fff;
+}
+
+.cc-button-main{
+    color: var(--ion-color-primary);
+}
+.cc-button{
+    height: 6rem; font-size: 2rem;
+}

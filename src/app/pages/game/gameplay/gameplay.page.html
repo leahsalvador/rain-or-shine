@@ -1,0 +1,72 @@
+<ion-header mode="md" class="ion-no-border">
+  <ion-toolbar>
+    
+  <ion-buttons slot="start">
+    <ion-button (click)="exitGame()">
+      <ion-icon slot="icon-only" name="close" color="light"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+  <ion-title  color="light" class="ion-text-center ion-text-uppercase">
+    Coins: {{this.gameService.userData.coins}}
+  </ion-title>
+  <ion-buttons slot="end">
+    <ion-button  (click)="exportCanvasImage()">
+      <ion-icon slot="icon-only" name="save" color="light"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>  
+  <canvas #imageCanvas
+    (touchstart)="canvasMouseDown($event)"
+    (touchend)="canvasMouseUp()"
+    (touchmove)="canvasMouseMove($event)"></canvas>
+  <ion-grid class="ion-margin-start ion-margin-end">
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="6" class="ion-text-center">
+        <ion-button shape="round" [color]="paintBrush" style="height: 5rem;" (click)="usePaintbrush()">
+          <ion-icon size="large" slot="icon-only" name="brush" [ngStyle]="{'color': this.gameService.selectedColor.color}"></ion-icon>
+        </ion-button>
+      </ion-col>
+      <ion-col size="6" class="ion-text-center">
+        <ion-button shape="round" [color]="eraser" style="height: 5rem;" (click)="useEraser()">
+          <ion-icon size="large" slot="icon-only" name="cube"></ion-icon>
+        </ion-button>
+      </ion-col>
+      <ion-col size="12">   
+        <ion-list>
+          <ion-item color="light">
+            <ion-range min="2" max="20" step="1" color="secondary" [(ngModel)]="paintSize">
+              <ion-icon size="small" slot="start" name="ellipse" color="dark"></ion-icon>
+              <ion-icon size="large" slot="end" name="ellipse"  color="dark"></ion-icon>
+            </ion-range>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar mode="md" class="category-container">
+    <ion-grid class="ion-no-padding  ion-no-margin">
+      <ion-row class="ion-justify-content-center">
+        <ion-col size="12" [ngStyle]="{'background-color': this.gameService.selectedColor.color, 'height': '5vh'}">   
+          <p class="color-detail">{{this.gameService.selectedColor.name}}</p>
+        </ion-col>
+      </ion-row>
+      <ion-row class="ion-justify-content-center">
+        <ion-col size="12" size-lg="8">
+          <div class="category">
+            <div *ngFor="let gameColor of this.gameService.paintColors" class="color-result" [ngStyle]="{'background-color': gameColor.color}" tappable (click)="selectColor(gameColor)">
+              <p class="color-detail-small"></p>
+              <div [class.lock]="gameColor.isLocked"></div>
+              <ion-icon [class.ion-hide]="!gameColor.isLocked" class="lock-icon" name="lock-closed"></ion-icon>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-footer>

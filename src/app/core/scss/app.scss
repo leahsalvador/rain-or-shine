@@ -1,0 +1,65 @@
+:root {
+    ion-img {
+        /** 
+        * Bug fix for:
+        * https://github.com/ionic-team/ionic/issues/18734
+        */
+        min-height: 1px !important;
+    }
+    
+    ion-content{
+        --ion-background-color: #f3f3f3 !important;
+        --background:  #f3f3f3 !important;
+        background:  #f3f3f3 !important;
+    }
+
+    ion-header{
+        --ion-background-color: var(--app-primary-color);
+        --background: var(--app-primary-color);
+        background: var(--app-primary-color);
+    }
+    ion-title {
+        position: absolute;
+        font-weight: 600;
+        top: 0;
+        left: 0;
+        /*padding: 0 90px 1px;//*/
+        width: 100%;
+        height: 100%;
+        text-align: center;
+    }
+    
+    .no-ripple {
+        --ripple-color: transparent;
+    }
+}
+
+.mt-0{
+    margin-top: 0;
+}
+
+.mb-0{
+    margin-bottom: 0;
+}
+
+.font-weight-900{
+    font-weight: 900;
+}
+
+.text-primary{
+    color: var(--ion-color-primary);
+}
+
+.text-light{
+    color: var(--ion-color-light);
+}
+
+.text-dark{
+    color: var(--ion-color-dark);
+}
+
+.bg-primary{
+    --ion-background-color: var(--ion-color-primary);
+    --background:  var(--ion-color-primary);
+    background:  var(--ion-color-primary);
+}

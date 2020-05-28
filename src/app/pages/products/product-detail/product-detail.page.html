@@ -1,0 +1,55 @@
+<ion-header mode="md">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button color="light" defaultHref="product-catalog"></ion-back-button>
+    </ion-buttons>
+    <ion-title color="light" class="ion-text-center ion-text-uppercase">
+      Product Catalog
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid class="image-banner">
+    <ion-row class="ion-justify-content-center ion-padding-top">
+      <ion-col size="12" size-lg="8" style="height: 150px;">
+        <ion-img class="product-img" [src]="this.productService.selectedProduct.image"></ion-img>
+      </ion-col>
+      <ion-col size="12" size-lg="8">
+        <ion-card-header class="product-header">
+          <ion-card-title color="dark">{{this.productService.selectedProduct.title}}</ion-card-title>
+          <ion-card-subtitle color="medium">{{this.productService.selectedProduct.subtitle}}</ion-card-subtitle>
+        </ion-card-header>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid>
+    <ion-row class="ion-justify-content-center ion-margin">
+      <ion-col size="12" *ngIf="this.productService.selectedProduct.hasPaintCalculator !== undefined">
+        <ion-button color="primary" fill="outline" expand="block" shape="round" tappable (click)="viewPaintCalculator()">
+          <ion-icon name="calculator-outline"></ion-icon>
+          Paint Calculator</ion-button>
+      </ion-col>
+      <ion-col size="12" *ngIf="this.productService.selectedProduct.color.length > 0">
+        <ion-button color="primary" fill="outline" expand="block" shape="round" tappable (click)="viewProductColors()">
+          <ion-icon name="color-palette-outline" ></ion-icon>
+          Available Colors</ion-button>
+      </ion-col>
+
+      <ion-col *ngFor="let row of this.productService.selectedProduct.content" class="ion-no-margin ion-no-padding" size="12" size-lg="8">
+        <ion-card class="product-detail">
+          <ion-card-header class="ion-margin-end">
+            <ion-card-subtitle color="primary">{{row.title}}
+            </ion-card-subtitle>
+          </ion-card-header>
+        
+          <div class="product-content" style="line-height: 23px; color: #3c3c3c;"[innerHtml]="row.content"  [class.ion-hide]="!row.active"></div>
+          <ion-button fill="clear" class="no-ripple toggle-btn" (click)="row.active = !row.active">
+            <ion-icon color="primary" slot="icon-only" [name]="row.active ? 'chevron-up-outline' : 'chevron-down-outline'"></ion-icon>
+          </ion-button>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

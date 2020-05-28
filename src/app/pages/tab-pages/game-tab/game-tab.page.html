@@ -1,0 +1,62 @@
+<ion-header mode="md" class="ion-no-border">
+  <ion-toolbar>
+    
+  <!--<ion-buttons slot="start" color="light">
+    <ion-menu-button color="light" autoHide="false"></ion-menu-button>
+  </ion-buttons>-->
+  <ion-title  color="light" class="ion-text-center ion-text-uppercase">
+    Coins: {{this.gameService.userData.coins}}
+  </ion-title>
+  <ion-buttons slot="end">
+    <ion-button (click)="openColorShop()">
+      <ion-icon slot="icon-only" name="color-palette" color="light"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-slides pager="true" [options]="slideOpts">
+    <ion-slide>
+      <ion-img src="assets/banner/Home-Banner.jpg"></ion-img>
+    </ion-slide>
+    <ion-slide>
+      <ion-img src="assets/banner/Home-Banner-SISTA.jpg"></ion-img>
+    </ion-slide>
+    <ion-slide>
+      <ion-img src="assets/banner/Home-Banner 2.jpg"></ion-img>
+    </ion-slide>
+    <ion-slide>
+      <ion-img src="assets/banner/Home-Banner 3.jpg"></ion-img>
+    </ion-slide>
+    <ion-slide>
+      <ion-img src="assets/banner/Home-Banner 4.jpg"></ion-img>
+    </ion-slide>
+  </ion-slides>
+  
+  <ion-grid>
+    <ion-row *ngFor="let row of this.gameService.gameDifficulties; let i = index" class="ion-justify-content-center">
+      <ion-col class="ion-padding-start ion-padding-end" size="12" size-md="8">
+        <ion-text class="ion-text-uppercase">
+          <h1 class="title">{{row.difficulty}}</h1>
+        </ion-text>
+      </ion-col>
+      <ion-col size="12" size-lg="8">
+        <div class="category">
+          <ion-card *ngFor="let level of row.level" class="ion-activatable level-container ripple-parent ion-no-margin ion-padding" mode="md">
+            <ion-img
+            class="level-image"
+            [src]="level.src"
+            tappable (click)="selectLevel(level, i)"
+            [attr.disabled]="level.isLocked">
+          </ion-img>
+          <div [class.lock]="level.isLocked"></div>
+          
+          <ion-icon [class.ion-hide]="!level.isLocked" class="lock-icon" name="lock-closed"></ion-icon>
+          <ion-ripple-effect></ion-ripple-effect>
+          </ion-card>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

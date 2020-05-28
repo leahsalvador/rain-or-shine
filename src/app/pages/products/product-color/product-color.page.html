@@ -1,0 +1,36 @@
+<ion-header mode="md">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button color="light" defaultHref="product-detail"></ion-back-button>
+    </ion-buttons>
+    <ion-title color="light" class="ion-text-center ion-text-uppercase">
+      Available Colors
+    </ion-title>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-grid class="image-banner">
+      <ion-row class="ion-justify-content-center ion-padding-top">
+        <ion-col size="12" size-lg="8" style="height: 150px;">
+          <ion-img class="product-img" [src]="this.productService.selectedProduct.image"></ion-img>
+        </ion-col>
+        <ion-col size="12" size-lg="8">
+          <ion-card-header class="product-header">
+            <ion-card-title color="dark">{{this.productService.selectedProduct.title}}</ion-card-title>
+            <ion-card-subtitle color="medium">{{this.productService.selectedProduct.subtitle}}</ion-card-subtitle>
+          </ion-card-header>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-grid>
+    <ion-row class="ion-justify-content-center ion-padding-top">
+      <ion-col class="color-box-container" *ngFor="let color of this.productService.selectedProduct.color" 
+        size="2.2" [ngStyle]="{'background-color': color.hex}">
+        <div class="color-box"></div>
+        <p class="color-detail"[ngStyle]="{'color': color.dark ? '#000000' : '#ffffff'}" >{{color.name}}</p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

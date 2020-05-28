@@ -1,0 +1,138 @@
+
+
+ion-content{
+    --ion-background-color: #ffffff !important;
+    --background:  #ffffff !important;
+    background:  rgb(240, 194, 194) !important;
+}
+.category-container{
+    --ion-background-color: #ffffff !important;
+    --background:  #ffffff !important;
+    background:  #ffffff !important;
+}
+
+ion-card{
+    --ion-background-color: #ffffff !important;
+    --background:  #ffffff !important;
+    background:  #ffffff !important;
+    margin-top: 0;
+    margin-bottom: 0.7rem;
+}
+ion-card-title{
+    font-size: 1rem;
+}
+
+.product-list-img{
+    height: 100%;
+    vertical-align: middle;
+}
+.product-list-header{
+    padding-left: 0;
+}
+.selected-color{
+    border: 3px solid var(--ion-color-danger);
+    border-radius: 50%;
+}
+
+.paint-color-image{
+    height: 120px; width: 120px; display:inline-block;
+}
+
+.color-box{
+    width:100%;
+    height:0; 
+    padding-top:100%;
+}
+
+.color-detail{
+    position: absolute;
+    /* top: 0; */
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: fit-content;
+    display: block;
+    font-size: 2.3vw;
+    margin: auto;
+    text-align: center;
+    color: white;
+    padding: 0.5rem;
+    white-space: pre-line;
+}
+
+.color-box-container{
+    margin: 0.1rem;
+    border: 1px solid #e4e4e4;
+}
+
+
+div.category{
+    /*white-space: nowrap;//*/
+    padding-top: 0.3rem;
+    overflow-x: auto !important;
+}
+
+.color-result{
+    width: 15vw;
+    height: 15vw; display:inline-block; 
+    margin: 0.1rem;
+    border-radius: 50%;
+    border: 5px solid #b6b6b6;
+    position:relative;
+}
+
+.color-detail-small{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: fit-content;
+    display: block;
+    font-size: 2.3vw;
+    margin: auto;
+    text-align: center;
+    text-shadow: 0px 0px 7px #6F6D75;
+    color: white;
+    padding: 0.5rem;
+    white-space: pre-line;
+}
+
+.color-detail{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: fit-content;
+    display: block;
+    font-size: 1rem;
+    margin: auto;
+    text-align: center;
+    text-shadow: 0px 0px 7px #6F6D75;
+    color: white;
+    padding: 0.5rem;
+    white-space: pre-line;
+}
+
+.lock{
+    position: absolute;
+    background: rgba(0,0,0, 0.3);
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+
+.lock-icon{
+    color: #fff;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    font-size: 1rem;
+}

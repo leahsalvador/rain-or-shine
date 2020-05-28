@@ -1,0 +1,33 @@
+
+.category-container{
+    --ion-background-color: #f3f3f3 !important;
+    --background:  #f3f3f3 !important;
+    background:  #f3f3f3 !important;
+}
+
+div.category{
+  white-space: nowrap;
+  overflow-x: auto !important;
+}
+
+ion-card{
+    --ion-background-color: #ffffff !important;
+    --background:  #ffffff !important;
+    background:  #ffffff !important;
+}
+ion-card-title{
+    font-size: 1rem;
+}
+
+.product-list-img{
+    height: 100%;
+    vertical-align: middle;
+}
+.product-list-header{
+    padding-left: 0;
+}
+
+.product-content p{
+    line-height: 23px;
+    color: var(--ion-color-dark) !important;
+}

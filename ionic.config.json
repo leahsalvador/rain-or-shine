@@ -1,0 +1,8 @@
+{
+  "name": "Rain or Shine",
+  "integrations": {
+    "cordova": {},
+    "capacitor": {}
+  },
+  "type": "angular"
+}

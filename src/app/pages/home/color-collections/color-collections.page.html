@@ -1,0 +1,37 @@
+<ion-header mode="md">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button color="light" defaultHref="tabs/home-tab"></ion-back-button>
+    </ion-buttons>
+    <ion-title color="light" class="ion-text-center ion-text-uppercase">
+      Color Collections
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-toolbar mode="md" class="category-container">
+  <ion-grid>
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="12" size-lg="8">
+        <div class="category">
+          <ion-img  *ngFor="let colorCollection of this.productService.colorCollections" 
+            class="paint-color-image"
+            [src]="colorCollection.src"
+            [class.selected-color]="colorCollection.active"
+            tappable (click)="selectColorCollection(colorCollection)"></ion-img>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-toolbar>
+<ion-content>
+  
+  <ion-grid>
+    <ion-row class="ion-justify-content-center ion-padding-top">
+      <ion-col class="color-box-container" size="2.2" *ngFor="let color of this.productService.selectedColorCollection.colors" [ngStyle]="{'background-color': color.hex}">
+        <div class="color-box"></div>
+        <p class="color-detail"[ngStyle]="{'color': color.dark ? '#000000' : '#ffffff'}" >{{color.name}}</p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

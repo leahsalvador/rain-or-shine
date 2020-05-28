@@ -1,0 +1,49 @@
+<ion-header mode="md">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button color="light" defaultHref="color-capture"></ion-back-button>
+    </ion-buttons>
+    <ion-title color="light" class="ion-text-center ion-text-uppercase">
+      Color Capture
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding-top" slots="fixed" 
+(touchstart)="cursorEvent($event)">
+  <img id="cursor" src="assets/icon/pointer.png" style="position:absolute; display:block;" [ngStyle]="{'top': cursorPositionY, 'left': cursorPositionX, 'visibility': currentDisplay}"/>
+  <canvas #imageCanvas
+    (touchstart)="canvasMouseDown($event)"
+    (touchend)="canvasMouseUp()"
+    (touchmove)="canvasMouseMove($event)"></canvas>
+    <!--
+       <canvas #imageCanvas (mousedown)="canvasMouseDown($event)" 
+    (touchstart)="canvasMouseDown($event)"
+    (mouseup)="canvasMouseUp()"
+    (mouseover)="canvasMouseUp()"
+    (mouseout)="canvasMouseUp()"
+    (touchend)="canvasMouseUp()"
+    (mousemove)="canvasMouseMove($event)"
+    (touchmove)="canvasMouseMove($event)"></canvas>
+    -->
+</ion-content>
+<ion-footer>
+  <ion-toolbar mode="md" class="category-container">
+    <ion-grid class="ion-no-padding  ion-margin-start ion-margin-end">
+      <ion-row class="ion-justify-content-center">
+        <ion-col size="12" [ngStyle]="{'background-color': currentColor, 'height': '20vh'}">   
+          <p class="color-detail">{{currentColor}}</p>
+        </ion-col>
+      </ion-row>
+      <ion-row class="ion-justify-content-center">
+        <ion-col size="12" size-lg="8">
+          <div class="category">
+            <div *ngFor="let c of this.oldColors" class="color-result" [ngStyle]="{'background-color': c}">
+              <p class="color-detail-small">{{c}}</p>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-footer>

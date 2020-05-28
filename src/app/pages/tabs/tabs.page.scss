@@ -1,0 +1,10 @@
+
+// all tabs texts
+.tabs-md .tab-button-text {
+	font-size: 14px;
+	color: var(--ion-color-danger);
+}
+// selected tab
+.tabs-md .tab-button[aria-selected=true] {
+	background-color: var(--ion-color-danger);
+}

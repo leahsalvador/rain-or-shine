@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button color="light" defaultHref="tabs/home-tab"></ion-back-button>
+    </ion-buttons>
+    <ion-title color="light" class="ion-text-center ion-text-uppercase">
+      Specs Writer Guide
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+  <ion-grid class="ion-margin-top">
+    <ion-row class="ion-justify-content-center">
+      <ion-col *ngFor="let spec of this.productService.specsList" class="ion-padding-start ion-padding-end" size="12" size-md="8" >
+        <ion-card tappable (click)="viewProducts(spec.product)"class="ion-activatable ripple-parent ion-no-margin ion-padding-top-4 ion-padding-bottom-4 col-btn" mode="ios">
+          <ion-row>
+            <ion-col size="3">
+              <ion-icon class="card-icon" name="document-text-outline"></ion-icon>
+            </ion-col>
+            <ion-col size="9" class="ion-padding-end">
+              <ion-text>
+                <h3 class="card-title">{{spec.name}}</h3>
+              </ion-text>
+              <p class="card-description">{{spec.total}} {{spec.total == 1 ? 'Product' : 'Products'}}</p>
+            </ion-col>
+          </ion-row>
+          <ion-ripple-effect></ion-ripple-effect>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

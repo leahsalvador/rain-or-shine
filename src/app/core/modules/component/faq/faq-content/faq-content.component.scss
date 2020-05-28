@@ -1,0 +1,25 @@
+
+.paint-issues{
+    background: #fff;
+}
+
+.toggle-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.paint-issues ion-card-header{
+    margin-right: unset;
+    -webkit-margin-end: var(--ion-margin, 2.3rem);
+    margin-inline-end: var(--ion-margin, 2.3rem);
+}
+
+ion-card-header{
+    white-space: pre-line;
+}
+
+.no-ripple{
+    --background-hover: unset;
+    --background-activated: unset;
+}
