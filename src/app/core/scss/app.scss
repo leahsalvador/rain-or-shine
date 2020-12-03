@@ -63,3 +63,24 @@
     --background:  var(--ion-color-primary);
     background:  var(--ion-color-primary);
 }
+
+.bg-white{
+    --ion-background-color: #fff;
+    --background:  #fff;
+    background:  #fff;
+}
+
+.bg-red{
+    --ion-background-color: var(--ion-color-danger);
+    --background:  var(--ion-color-danger);
+    background:  var(--ion-color-danger);
+}
+
+.border-round{
+    border-radius: 15px;
+}
+.bg-primary{
+    --ion-background-color: var(--app-primary-color);
+    --background: var(--app-primary-color);
+    background: var(--app-primary-color);
+}

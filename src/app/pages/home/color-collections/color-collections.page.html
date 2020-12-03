@@ -13,6 +13,14 @@
   <ion-grid>
     <ion-row class="ion-justify-content-center">
       <ion-col size="12" size-lg="8">
+        <ion-text class="ion-text-center">
+          <p style="margin:0;"><small>Click the product to browse the color gallery.</small></p>
+          <p style="margin:0;"><small> 	&#8592; Swipe to browse product &#8594;</small></p>
+        </ion-text>
+      </ion-col>
+    </ion-row>
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="12" size-lg="8">
         <div class="category">
           <ion-img  *ngFor="let colorCollection of this.productService.colorCollections" 
             class="paint-color-image"
@@ -22,13 +30,24 @@
         </div>
       </ion-col>
     </ion-row>
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="12" size-lg="8">
+        <ion-text class="ion-text-center">
+          <h6 style="margin-bottom:0;"><strong>Disclaimer</strong></h6>
+        </ion-text>
+        <ion-text class="ion-text-center">
+          <p style="margin:0;"><small>Colors may vary from actual paint due to age, light and coating process.</small></p>
+        </ion-text>
+      </ion-col>
+    </ion-row>
   </ion-grid>
 </ion-toolbar>
 <ion-content>
   
   <ion-grid>
-    <ion-row class="ion-justify-content-center ion-padding-top">
-      <ion-col class="color-box-container" size="2.2" *ngFor="let color of this.productService.selectedColorCollection.colors" [ngStyle]="{'background-color': color.hex}">
+    <ion-row class="ion-justify-content-center">
+      <ion-col class="color-box-container" size="2.2" *ngFor="let color of this.productService.selectedColorCollection.colors" [ngStyle]="{'background-color': color.hex}"
+      (click)="viewColor(color)">
         <div class="color-box"></div>
         <p class="color-detail"[ngStyle]="{'color': color.dark ? '#000000' : '#ffffff'}" >{{color.name}}</p>
       </ion-col>

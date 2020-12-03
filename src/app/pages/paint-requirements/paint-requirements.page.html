@@ -1,0 +1,78 @@
+<ion-header mode="md">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button color="light" defaultHref="painting-tips"></ion-back-button>
+    </ion-buttons>
+    <ion-title color="light" class="ion-text-center ion-text-uppercase">
+      Painting Tips
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="">
+  <ion-grid class="ion-no-padding bg-white">
+    <ion-row class="ion-padding ion-justify-content-center bg-white" 
+    style="background-image:url(assets/tips/estimate/Banner.jpg); background-size: cover; background-repeat: no-repeat;">
+      <ion-col class="ion-padding-start ion-padding-end" size="12">
+        <ion-text>
+          <h1 class="about-title" style="color: #ffc107;">Points to Remember</h1>
+        </ion-text>
+        <ol style="color: #fff;">
+          <li>Determine the number of square meters to be painted.</li>
+          <li>Divide the total number of square meters by the coverage per 4 liters of paint(the result is the number of 4 liters required).</li>
+        </ol>
+        <ion-text>
+          <h2 class="about-title" style="color: #ffc107;">Variables that affect spreading rates.</h2>
+        </ion-text>
+        <ol type="A" style="color: #fff;">
+          <li>Type and condition of surface.</li>
+          <li>Tools used for application.</li>
+          <li>Thinning.</li>
+          <li>Individual application technique.</li>
+        </ol>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="ion-margin ion-padding bg-white border-round ion-justify-content-center" >
+      <ion-col class="ion-padding-start ion-padding-end" size="12" size-md="12">
+        <ion-text class="ion-text-center">
+          <h1 class="about-title"><strong>How to Get the Area of Different Shapes</strong></h1>
+        </ion-text>
+      </ion-col>
+      <ion-col class="ion-padding" size="12" size-md="4">
+        <ion-text>
+          <h3 class="about-title">1. RECTANGLE</h3>
+        </ion-text>
+        <ion-img src="assets/tips/estimate/Rectangle.jpg" class="ion-margin"></ion-img>
+        <p class="ion-text-center">Multiply the base measurement by height in meters</p>
+        <ion-text color="danger" class="ion-text-center"><p>base x height = Area in square meters</p></ion-text>
+      </ion-col>
+      <ion-col class="ion-padding" size="12" size-md="4">
+        <ion-text>
+          <h3 class="about-title">2. TRIANGLE</h3>
+        </ion-text>
+        <ion-img src="assets/tips/estimate/Rectangle.jpg" class="ion-margin"></ion-img>
+        <p class="ion-text-center">Multiply the base measurement by height in meters and divide by 2</p>
+        <ion-text color="danger" class="ion-text-center"><p>(base x height) / 2 = Area in square meters</p></ion-text>
+      </ion-col>
+      <ion-col class="ion-padding" size="12" size-md="4">
+        <ion-text>
+          <h3 class="about-title">3. CYLINDRICAL</h3>
+        </ion-text>
+        <ion-img src="assets/tips/estimate/Cylindrical.jpg" class="ion-margin"></ion-img>
+        <p class="ion-text-center">Area of Cylinder + Area End Circles (1) Area of Cylinder</p>
+        <ion-text color="danger" class="ion-text-center"><p>Multiply the circumference by the height in meters</p></ion-text>
+        <p class="ion-text-center">(2) Area of Circle</p>
+        <ion-text color="danger" class="ion-text-center"><p>Multiply the diameter by itself the multiply by 0.7854</p></ion-text>
+        <p class="ion-text-center ion-padding" style="border: 1px solid #dee2e6!important;">Circumference = diameter x 3.1416</p>
+      </ion-col>
+      <ion-col class="ion-padding" size="12">
+        <ion-text class="ion-text-center">
+          <h3 class="about-title">4. Downspouts and Gutters - calculate area as in cylinder
+          </h3>
+        </ion-text>
+      </ion-col>
+    </ion-row>
+  
+  </ion-grid>
+</ion-content>

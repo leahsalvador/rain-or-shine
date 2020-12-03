@@ -27,3 +27,10 @@
 
 /* Custom CSS */
 @import "app/core/scss/app.scss";
+
+
+.view-color-modal-class{
+    background-color: transparent; 
+    --background: transparent;
+    --ion-color-base: transparent !important;
+ }

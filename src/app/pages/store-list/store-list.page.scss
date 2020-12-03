@@ -1,0 +1,21 @@
+
+.store-card{
+    background: #fff;
+    margin-top: 0;
+    bottom: 0;
+}
+
+.toggle-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+ion-card-header{
+    white-space: pre-line;
+}
+
+.no-ripple{
+    --background-hover: unset;
+    --background-activated: unset;
+}

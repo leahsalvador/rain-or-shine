@@ -1,0 +1,42 @@
+<ion-header mode="md" class="ion-no-border">
+  <ion-toolbar>
+  <ion-buttons slot="start">
+    <ion-back-button color="light" defaultHref="tabs/home-tab"></ion-back-button>
+  </ion-buttons>
+  <ion-title  color="light" class="ion-text-center ion-text-uppercase">
+    Designer Scheme
+  </ion-title>
+  <!--<ion-buttons slot="end">
+    <ion-button  (click)="exportCanvasImage()">
+      <ion-icon slot="icon-only" name="save" color="light"></ion-icon>
+    </ion-button>
+  </ion-buttons>-->
+  </ion-toolbar>
+</ion-header>
+
+<ion-content slot="fixed" [scrollY]="false">  
+  <div id="bg-color" [style.background-color]="this.selectedColor.hex" style="position:absolute; top:25%;">
+    <ion-img [src]="this.schemeService.selectedData.src2"></ion-img>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar mode="md" class="category-container">
+    <ion-grid class="ion-no-padding  ion-no-margin">
+      <ion-row *ngIf="this.selectedColor !== undefined" class="ion-justify-content-center">
+        <ion-col size="12" [ngStyle]="{'background-color': this.selectedColor.hex, 'height': '5vh'}">   
+          <p class="color-detail">{{this.selectedColor.name}}</p>
+        </ion-col>
+      </ion-row>
+      <ion-row class="ion-justify-content-center">
+        <ion-col size="12" size-lg="8">
+          <div class="category">
+            <div *ngFor="let paintColor of this.productService.selectedProduct.color" class="color-result" [ngStyle]="{'background-color': paintColor.hex}" tappable (click)="selectColor(paintColor)">
+              <p class="color-detail-small"></p>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-footer>

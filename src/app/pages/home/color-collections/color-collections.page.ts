@@ -1,7 +1,9 @@
+import { ColorViewModalPage } from './../../../color-view-modal/color-view-modal.page';
 import { ColorCollectionModel } from './../../../core/interfaces/color-colleciton.interface';
 import { ProductColor } from './../../../core/interfaces/product/product-color.interface';
 import { ProductService } from './../../../core/services/product.service';
 import { Component, OnInit } from '@angular/core';
+import { ModalController } from '@ionic/angular';
 
 @Component({
   selector: 'app-color-collections',
@@ -11,7 +13,8 @@ import { Component, OnInit } from '@angular/core';
 export class ColorCollectionsPage implements OnInit {
 
   constructor(
-    public productService: ProductService
+    public productService: ProductService,
+    public modalController: ModalController
   ) { 
   }
 
@@ -24,4 +27,16 @@ export class ColorCollectionsPage implements OnInit {
     this.productService.selectedColorCollection = colorCollection;
   }
 
+  async viewColor(color) {
+    const modal = await this.modalController.create({
+      component: ColorViewModalPage,
+      cssClass: 'view-color-modal-class',
+      backdropDismiss: false,
+      animated: false,
+      componentProps: {
+        color
+      }
+    });
+    await modal.present();
+  }
 }

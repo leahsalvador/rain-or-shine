@@ -10,7 +10,7 @@
 
   <ion-grid class="ion-margin-top">
     <ion-row class="ion-justify-content-center">
-      <ion-col class="ion-padding-start ion-padding-end" size="12" size-md="8">
+      <ion-col class="ion-padding-start ion-padding-end ion-hide" size="12" size-md="8">
         <ion-card class="ion-activatable ripple-parent ion-no-margin ion-padding-top-4 ion-padding-bottom-4 col-btn" mode="ios">
           <ion-row>
             <ion-col size="2">
@@ -20,18 +20,13 @@
               <ion-text>
                 <h3 class="card-title">Professional Painting Service</h3>
               </ion-text>
-              <p class="card-description">
-                (632) 682 8888 /
-                (632) 645 0807 /
-                (632) 645 8750 /
-                (632) 645 8744
-              </p>
+              <p class="card-description">8-682-8888 / 8-645-0807</p>
             </ion-col>
           </ion-row>
           <ion-ripple-effect></ion-ripple-effect>
         </ion-card>
       </ion-col>
-      <ion-col class="ion-padding-start ion-padding-end" size="12" size-md="8">
+      <ion-col class="ion-padding-start ion-padding-end" size="12" size-md="8" (click)="sendEmail()">
         <ion-card class="ion-activatable ripple-parent ion-no-margin ion-padding-top-4 ion-padding-bottom-4 col-btn" mode="ios">
           <ion-row>
             <ion-col size="2">
@@ -48,7 +43,7 @@
         </ion-card>
       </ion-col>
       <ion-col class="ion-padding-start ion-padding-end" size="12" size-md="8" >
-        <ion-card class="ion-activatable ripple-parent ion-no-margin ion-padding-top-4 ion-padding-bottom-4 col-btn" mode="ios">
+        <ion-card class="ion-no-margin ion-padding-top-4 ion-padding-bottom-4 col-btn" mode="ios">
           <ion-row>
             <ion-col size="2">
               <ion-icon class="card-icon" name="mail-outline"></ion-icon>
@@ -58,12 +53,14 @@
                 <h3 class="card-title">Contact Us</h3>
               </ion-text>
               <p class="card-description">For your suggestions or feedback</p>
+              <p class="card-description"><ion-text color="primary" (click)="callPhone('8-682-8888')"><strong>8-682-8888</strong></ion-text> / 
+                <ion-text color="primary" (click)="callPhone('8-645-0807')"><strong>8-645-0807</strong></ion-text></p>
             </ion-col>
           </ion-row>
           <ion-ripple-effect></ion-ripple-effect>
         </ion-card>
       </ion-col>
-      <ion-col class="ion-padding-start ion-padding-end" size="12" size-md="8" (click)="open('faq')">
+      <ion-col class="ion-padding-start ion-padding-end ion-hide" size="12" size-md="8" (click)="open('faq')">
         <ion-card class="ion-activatable ripple-parent ion-no-margin ion-padding-top-4 ion-padding-bottom-4 col-btn" mode="ios">
           <ion-row>
             <ion-col size="2">
@@ -79,7 +76,7 @@
           <ion-ripple-effect></ion-ripple-effect>
         </ion-card>
       </ion-col>
-      <ion-col class="ion-padding-start ion-padding-end" size="12" size-md="8" (click)="open('disclaimer')">
+      <ion-col class="ion-padding-start ion-padding-end ion-hide" size="12" size-md="8" (click)="open('disclaimer')">
         <ion-card class="ion-activatable ripple-parent ion-no-margin ion-padding-top-4 ion-padding-bottom-4 col-btn" mode="ios">
           <ion-row>
             <ion-col size="2">
@@ -111,6 +108,22 @@
           <ion-ripple-effect></ion-ripple-effect>
         </ion-card>
       </ion-col>
+      <!--<ion-col class="ion-padding-start ion-padding-end" size="12" size-md="8" (click)="open('painting-tips')">
+        <ion-card class="ion-activatable ripple-parent ion-no-margin ion-padding-top-4 ion-padding-bottom-4 col-btn" mode="ios">
+          <ion-row>
+            <ion-col size="2">
+              <ion-icon class="card-icon" name="color-palette-outline"></ion-icon>
+            </ion-col>
+            <ion-col size="10" class="ion-padding-end">
+              <ion-text>
+                <h3 class="card-title">Painting Tips</h3>
+              </ion-text>
+              <p class="card-description">&nbsp;</p>
+            </ion-col>
+          </ion-row>
+          <ion-ripple-effect></ion-ripple-effect>
+        </ion-card>
+      </ion-col>-->
     </ion-row>
   </ion-grid>
 </ion-content>

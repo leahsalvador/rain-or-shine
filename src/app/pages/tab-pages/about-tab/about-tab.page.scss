@@ -1,3 +1,28 @@
+
+#home-logo {
+    margin: auto;
+    display:block;
+    width: 80%;
+}
+
+.home-btn-label{
+    text-align: right;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-right: 0.7em;
+}
+
+#home-top-text {
+    margin-top: 0;
+    font-weight: 600;
+    color: #e2e3ea;
+}
+
+.home-span-color{
+    color: #fe1f23;
+}
+
+
 .about-title{
     font-weight: 700;
     color: var(--app-primary-color);
@@ -8,7 +33,19 @@
     color: #3c3c3c;
 }
 
+.video-title{
+    margin-top: 0px !important;
+    color: var(--ion-color-dark);
+}
+.video-con{
+    background-color: #f3f3f3;
+}
 .quote{
     font-weight: bolder;
     font-style: italic;
+}
+.about-service-img{
+    max-height: 250px;
+    height: 100%;
+    padding: 15px;
 }

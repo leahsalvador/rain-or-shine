@@ -81,6 +81,50 @@ const routes: Routes = [
   {
     path: 'color-shop',
     loadChildren: () => import('./pages/game/color-shop/color-shop.module').then( m => m.ColorShopPageModule)
+  },
+  {
+    path: 'painting-tips',
+    loadChildren: () => import('./pages/contact-us/painting-tips/painting-tips.module').then( m => m.PaintingTipsPageModule)
+  },
+  {
+    path: 'color-effect',
+    loadChildren: () => import('./pages/color-effect/color-effect.module').then( m => m.ColorEffectPageModule)
+  },
+  {
+    path: 'general-direction',
+    loadChildren: () => import('./pages/general-direction/general-direction.module').then( m => m.GeneralDirectionPageModule)
+  },
+  {
+    path: 'paint-requirements',
+    loadChildren: () => import('./pages/paint-requirements/paint-requirements.module').then( m => m.PaintRequirementsPageModule)
+  },
+  {
+    path: 'painting-work',
+    loadChildren: () => import('./pages/painting-work/painting-work.module').then( m => m.PaintingWorkPageModule)
+  },
+  {
+    path: 'store-list',
+    loadChildren: () => import('./pages/store-list/store-list.module').then( m => m.StoreListPageModule)
+  },
+  {
+    path: 'search-product-catalog',
+    loadChildren: () => import('./pages/search-product-catalog/search-product-catalog.module').then( m => m.SearchProductCatalogPageModule)
+  },
+  {
+    path: 'scheme-colors',
+    loadChildren: () => import('./pages/scheme-colors/scheme-colors.module').then( m => m.SchemeColorsPageModule)
+  },
+  {
+    path: 'scheme-editor',
+    loadChildren: () => import('./pages/scheme-editor/scheme-editor.module').then( m => m.SchemeEditorPageModule)
+  },
+  {
+    path: 'color-view-modal',
+    loadChildren: () => import('./color-view-modal/color-view-modal.module').then( m => m.ColorViewModalPageModule)
+  },
+  {
+    path: 'painting101',
+    loadChildren: () => import('./painting101/painting101.module').then( m => m.Painting101PageModule)
   }
 ];
 @NgModule({

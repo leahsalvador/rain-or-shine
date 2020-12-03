@@ -1,6 +1,6 @@
 {
   "name": "rain-or-shine",
-  "version": "0.0.1",
+  "version": "1.0.1",
   "author": "Ionic Framework",
   "homepage": "https://ionicframework.com/",
   "scripts": {
@@ -8,6 +8,8 @@
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
+    "build:android": "ionic cordova build android",
+    "preapre:android": "ionic cordova prepare android",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
@@ -19,9 +21,11 @@
     "@angular/platform-browser": "~8.2.14",
     "@angular/platform-browser-dynamic": "~8.2.14",
     "@angular/router": "~8.2.14",
+    "@capacitor/android": "^2.0.1",
     "@capacitor/core": "2.0.1",
     "@ionic-native/android-permissions": "^5.26.0",
     "@ionic-native/base64-to-gallery": "^5.26.0",
+    "@ionic-native/call-number": "^5.30.0",
     "@ionic-native/camera": "^5.24.0",
     "@ionic-native/camera-preview": "^5.24.0",
     "@ionic-native/core": "^5.22.0-beta-1",
@@ -39,6 +43,7 @@
     "@ionic-native/status-bar": "^5.24.0",
     "@ionic-native/toast": "^5.24.0",
     "@ionic/angular": "^5.0.0",
+    "call-number": "^1.0.1",
     "com-sarriaroman-photoviewer": "^1.2.4",
     "cordova-android": "^8.1.0",
     "cordova-base64-to-gallery": "^4.1.3",
@@ -59,6 +64,7 @@
     "core-js": "^2.5.4",
     "es.keensoft.fullscreenimage": "^0.2.10",
     "es6-promise-plugin": "^4.2.2",
+    "jetifier": "^1.6.6",
     "rxjs": "~6.5.1",
     "tslib": "^1.9.0",
     "zone.js": "~0.9.1"

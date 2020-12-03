@@ -1,3 +1,4 @@
+import { ProductService } from './../../../core/services/product.service';
 import { LevelModel } from './../../../core/interfaces/level.interface';
 import { HomeModule } from './../../../core/interfaces/home.interface';
 import { Component, OnInit } from '@angular/core';
@@ -14,19 +15,12 @@ export class HomeTabPage implements OnInit {
   homeModule: HomeModule [];
   currentSelectedLevel: LevelModel;
   
-  constructor(private router: Router) {
+  constructor(private router: Router, private productService: ProductService) {
     this.initialize();
   }
 
   initialize(){
     this.homeModule = [
-      {
-        title: 'Product Catalog',
-        titleRow1: 'Product',
-        titleRow2: 'Catalog',
-        icon: 'file-tray-full-outline',
-        id: 'product-catalog'
-      },
       {
         title: 'Choose Paint',
         titleRow1: 'Choose',
@@ -49,11 +43,18 @@ export class HomeTabPage implements OnInit {
         id: 'designer-scheme'
       },
       {
-        title: 'Specs Writer Guide',
-        titleRow1: 'Specs',
-        titleRow2: 'Writer Guide',
-        icon: 'book-outline',
-        id: 'specs-writer-guide'
+        title: 'Product Catalog',
+        titleRow1: 'Product',
+        titleRow2: 'Catalog',
+        icon: 'file-tray-full-outline',
+        id: 'product-catalog'
+      },
+      {
+        title: 'Color Capture',
+        titleRow1: 'Color',
+        titleRow2: 'Capture',
+        icon: 'camera-outline',
+        id: 'color-capture'
       },
       {
         title: 'Paint Calculator',
@@ -63,20 +64,36 @@ export class HomeTabPage implements OnInit {
         id: 'paint-calculator'
       },
       {
-        title: 'Color Capture',
-        titleRow1: 'Color',
-        titleRow2: 'Capture',
-        icon: 'camera-outline',
-        id: 'color-capture'
+        title: 'Painting Tips',
+        titleRow1: 'Painting',
+        titleRow2: 'Tips',
+        icon: 'color-fill-outline',
+        id: 'painting-tips'
       }
     ];
+    /*
+      {
+        title: 'Specs Writer Guide',
+        titleRow1: 'Specs',
+        titleRow2: 'Writer Guide',
+        icon: 'book-outline',
+        id: 'specs-writer-guide'
+      },
+    //*/
   }
 
   ngOnInit() {
 
   }
 
+
+  openSearchProduct(){
+    this.productService.searchProduct = true;
+    this.router.navigateByUrl('product-catalog');
+  }
+
   open(link: string){
+    this.productService.searchProduct = false;
     this.router.navigateByUrl(link);
   }
 }

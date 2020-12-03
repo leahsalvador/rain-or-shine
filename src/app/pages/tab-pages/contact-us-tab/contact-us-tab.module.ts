@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { ContactUsTabPageRoutingModule } from './contact-us-tab-routing.module';
 
 import { ContactUsTabPage } from './contact-us-tab.page';
+import { EmailComposer } from '@ionic-native/email-composer/ngx';
 
 @NgModule({
   imports: [
@@ -15,6 +16,7 @@ import { ContactUsTabPage } from './contact-us-tab.page';
     IonicModule,
     ContactUsTabPageRoutingModule
   ],
+  providers: [EmailComposer],
   declarations: [ContactUsTabPage]
 })
 export class ContactUsTabPageModule {}

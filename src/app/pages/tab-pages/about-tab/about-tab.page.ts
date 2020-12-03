@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about-tab.page.scss'],
 })
 export class AboutTabPage implements OnInit {
-
+  seeMore = true;
   constructor() { }
 
   ngOnInit() {

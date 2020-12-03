@@ -9,5 +9,30 @@
   </ion-toolbar>
 </ion-header>
 
+<ion-toolbar  mode="md" class="category-container">
+  <ion-grid>
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="12" size-lg="8">
+        <div class="category ion-text-center">
+          <ion-button  *ngFor="let t of this.scheme.types" 
+            class="ion-margin-bottom ion-margin-top" 
+            shape="round" 
+            [color]="t.active ? 'primary' : 'light'"
+            (click)="select(t)">{{t.type}}</ion-button>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-toolbar>
 <ion-content>
+  <ion-grid>
+    <ion-row class="ion-justify-content-center">
+      <ion-col *ngFor="let row of this.scheme.selectedMenus" class="ion-no-margin ion-no-padding" size="12" size-md="8">
+        <ion-card class="ion-activatable ripple-parent bg-white" mode="md" (click)="selectMenu(row)">
+          <ion-img [src]="row.src1"></ion-img>
+          <ion-ripple-effect></ion-ripple-effect>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

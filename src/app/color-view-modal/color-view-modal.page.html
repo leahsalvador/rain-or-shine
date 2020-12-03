@@ -1,0 +1,27 @@
+<ion-header mode="md" class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button (click)="this.modalController.dismiss();">
+        <ion-icon slot="icon-only" name="close" color="light"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="overflow-hidden">
+  <ion-grid class="">
+    <ion-row class="ion-justify-content-center">
+      <ion-col class="color-box-container" size="12" [ngStyle]="{'background-color': color.hex}">
+        <div class="color-box"></div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid class="">
+    <ion-row class="ion-justify-content-center">
+      <ion-text class="ion-text-center">
+        <h3><strong>{{color.name}}</strong></h3>
+      </ion-text>
+    </ion-row>
+  </ion-grid>
+</ion-content>

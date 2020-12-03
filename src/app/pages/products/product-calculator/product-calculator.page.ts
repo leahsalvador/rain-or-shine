@@ -11,11 +11,15 @@ export class ProductCalculatorPage implements OnInit {
   
   keyboardStyle = { width: '100%', height: '0px' };
 
+  m2 = 0;
+  ft2 = 0;
   constructor(
     public productService: ProductService,
     private keyboard: Keyboard
   ) { 
     
+    this.m2 = 0;
+    this.ft2 = 0;
     this.keyboard.onKeyboardWillShow().subscribe( {
       next: x => {
         this.keyboardStyle.height = x.keyboardHeight + 'px';
@@ -68,5 +72,12 @@ export class ProductCalculatorPage implements OnInit {
     setTimeout(() => {
       container.scrollToPoint(0, total - 50, 400);
     }, 500);
+  }
+
+  convertToFt2(){
+    this.ft2 = this.m2 * 10.764;
+  }
+  convertToM2(){
+    this.m2 = this.ft2 / 10.764;
   }
 }

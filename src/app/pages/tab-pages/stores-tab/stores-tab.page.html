@@ -5,63 +5,12 @@
     </ion-title>
   </ion-toolbar>
 </ion-header>
-
-<ion-toolbar mode="md" class="map-container">
-  <ion-grid>
-    <ion-row class="ion-justify-content-center">
-      <ion-col class="ion-no-marign ion-no-padding" size="12" size-lg="8" style="height: 250px;">
-      </ion-col>
-      <ion-col class="ion-no-marign ion-no-padding" size="12" size-lg="8">
-        <ion-card class="store-selected" mode="md">
-          <ion-row>
-            <ion-col size="2" size-lg="1">
-              <div class="location-icon-container">
-                <ion-icon class="location-icon" color="danger" name="location"></ion-icon>
-                <span class="location-text">{{selectedStore.distance}}km</span>
-              </div>
-            </ion-col>
-            <ion-col size="10" size-lg="11">
-              <ion-card-header>
-                <ion-card-title color="dark">{{selectedStore.name}}</ion-card-title>
-              </ion-card-header>
-              <ion-card-content>{{selectedStore.address}}</ion-card-content>
-            </ion-col>
-          </ion-row>
-        </ion-card>
-      </ion-col>
-      <ion-col class="ion-no-marign ion-no-padding" size="12" size-lg="8">
-        <ion-card class="store-list">
-          <ion-row>
-            <ion-col size="12">
-              <ion-card-header>
-                <ion-card-subtitle color="dark">Nearby Stores</ion-card-subtitle>
-              </ion-card-header>
-            </ion-col>
-          </ion-row>
-        </ion-card>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
-</ion-toolbar>
 <ion-content>
   <ion-grid>
     <ion-row class="ion-justify-content-center">
-      <ion-col *ngFor="let row of storeLocations" class="ion-no-marign ion-no-padding" size="12" size-lg="8">
-        <ion-card class="store-list ion-activatable ripple-parent" mode="md" (click)="selectStore(row)">
-          <ion-row>
-            <ion-col size="2" size-lg="1">
-              <div class="location-icon-container">
-                <ion-icon class="location-icon" name="location" [color]="row.active ? 'danger' : 'primary'"></ion-icon>
-                <span class="location-text">{{row.distance}}km</span>
-              </div>
-            </ion-col>
-            <ion-col size="10" size-lg="11">
-              <ion-card-header>
-                <ion-card-title color="dark">{{row.name}}</ion-card-title>
-              </ion-card-header>
-              <ion-card-content>{{row.address}}</ion-card-content>
-            </ion-col>
-          </ion-row>
+      <ion-col *ngFor="let row of this.storeService.storeLocations" class="ion-no-margin ion-no-padding" size="6" size-md="4">
+        <ion-card class="ion-activatable ripple-parent bg-white" mode="md" (click)="selectStore(row)">
+          <ion-img [src]="row.src"></ion-img>
           <ion-ripple-effect></ion-ripple-effect>
         </ion-card>
       </ion-col>

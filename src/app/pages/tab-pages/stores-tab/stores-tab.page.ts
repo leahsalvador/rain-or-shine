@@ -1,4 +1,7 @@
-import { StoreLocationModel } from './../../../core/interfaces/store-lication.interface';
+import { LoadingController } from '@ionic/angular';
+import { Router } from '@angular/router';
+import { StoreService } from './../../../core/services/store.service';
+import { StoreLocationModel } from '../../../core/interfaces/store-location.interface';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -8,34 +11,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StoresTabPage implements OnInit {
   
-  storeLocations: StoreLocationModel[];
-  selectedStore: StoreLocationModel;
-  constructor() { 
+  constructor(
+    private router: Router,
+    public storeService: StoreService,
+    private loadingController: LoadingController
+  ) { 
   }
 
   ngOnInit() {
 
-    let active = true;
-    this.storeLocations = [];
-    for(let x = 0; x <= 10; x++){
-      this.storeLocations.push({
-        name: `Sample Branch Name ${(x+1)}`,
-        address: `Sample Branch Address Lorem Ipsum  Lorem Ipsum  Lorem Ipsum  Lorem Ipsum `,
-        long: 0,
-        lat: 0,
-        distance: 0,
-        active
-      });
-      if(active){
-        active = false;
-        this.selectedStore = this.storeLocations[x];
-      }
-    }
   }
 
-  selectStore(store: StoreLocationModel){
-    this.selectedStore.active = !this.selectedStore.active;
-    store.active = !store.active;
-    this.selectedStore = store;
+
+  async selectStore(store: StoreLocationModel){
+    const loading = await this.loadingController.create({
+      message: 'Please wait...'
+    });
+    await loading.present();
+    this.storeService.selectedStore = store;
+    this.router.navigateByUrl('store-list');
   }
+
 }

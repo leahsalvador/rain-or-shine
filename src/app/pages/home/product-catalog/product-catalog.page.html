@@ -7,9 +7,10 @@
       Product Catalog
     </ion-title>
   </ion-toolbar>
+  <ion-searchbar *ngIf="this.productService.searchProduct" [(ngModel)]="searchText" color="light"  placeholder="Search Product"></ion-searchbar>
 </ion-header>
 
-<ion-toolbar mode="md" class="category-container">
+<ion-toolbar *ngIf="!this.productService.searchProduct" mode="md" class="category-container">
   <ion-grid>
     <ion-row class="ion-justify-content-center">
       <ion-col size="12" size-lg="8">
@@ -26,7 +27,7 @@
 </ion-toolbar>
 <ion-content>
   <!-- Label only -->
-  <ion-grid>
+  <ion-grid  *ngIf="!this.productService.searchProduct">
     <ion-row class="ion-justify-content-center">
       <ion-col *ngFor="let product of this.productService.selectedProductCategory.products" class="ion-no-margin ion-no-padding" size="12" size-lg="8">
         <ion-card mode="ios" class="ion-activatable ripple-parent" tappable (click)="viewProductDetail(product)">
@@ -44,6 +45,28 @@
           <ion-ripple-effect></ion-ripple-effect>
         </ion-card>
       </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid *ngIf="this.productService.searchProduct" class="ion-margin-top">
+    <ion-row class="ion-justify-content-center">
+      <div *ngFor="let product of this.productService.selectedProductCategory.products">
+        <ion-col *ngIf="product.title.toLowerCase().indexOf(searchText.toLowerCase().trim()) !== -1" class="ion-no-margin ion-no-padding" size="12" size-lg="8">
+          <ion-card mode="ios" class="ion-activatable ripple-parent" tappable (click)="viewProductDetail(product)">
+            <ion-row>
+              <ion-col size="3" size-lg="3">
+                <ion-img class="product-list-img" [src]="product.image"></ion-img>
+              </ion-col>
+              <ion-col size="9" size-lg="9">
+                <ion-card-header class="product-list-header">
+                  <ion-card-title color="dark">{{product.title}}</ion-card-title>
+                  <ion-card-subtitle color="medium">{{product.subtitle}}</ion-card-subtitle>
+                </ion-card-header>
+              </ion-col>
+            </ion-row>
+            <ion-ripple-effect></ion-ripple-effect>
+          </ion-card>
+        </ion-col>
+      </div>
     </ion-row>
   </ion-grid>
 </ion-content>

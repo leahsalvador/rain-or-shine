@@ -1,0 +1,101 @@
+<ion-header mode="md">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button color="light" defaultHref="tabs/contact-us-tab"></ion-back-button>
+    </ion-buttons>
+    <ion-title color="light" class="ion-text-center ion-text-uppercase">
+      Painting Tips
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+  <ion-grid class="ion-margin-top">
+    <ion-row class="ion-justify-content-center">
+      <ion-col class="ion-padding-start ion-padding-end" size="12" size-md="8" (click)="open('color-effect')">
+        <ion-card class="ion-activatable ripple-parent ion-no-margin ion-padding-top-4 ion-padding-bottom-4 col-btn" mode="ios">
+          <ion-row>
+            <ion-col size="2">
+              <ion-icon class="card-icon" name="color-palette-outline"></ion-icon>
+            </ion-col>
+            <ion-col size="10" class="ion-padding-end">
+              <ion-text>
+                <h3 class="card-title">How Colors Affect You</h3>
+              </ion-text>
+              <p class="card-description">&nbsp;</p>
+            </ion-col>
+          </ion-row>
+          <ion-ripple-effect></ion-ripple-effect>
+        </ion-card>
+      </ion-col>
+      
+      <ion-col class="ion-padding-start ion-padding-end" size="12" size-md="8" (click)="open('general-direction')">
+        <ion-card class="ion-activatable ripple-parent ion-no-margin ion-padding-top-4 ion-padding-bottom-4 col-btn" mode="ios">
+          <ion-row>
+            <ion-col size="2">
+              <ion-icon class="card-icon" name="color-palette-outline"></ion-icon>
+            </ion-col>
+            <ion-col size="10" class="ion-padding-end">
+              <ion-text>
+                <h3 class="card-title">General Direction</h3>
+              </ion-text>
+              <p class="card-description">&nbsp;</p>
+            </ion-col>
+          </ion-row>
+          <ion-ripple-effect></ion-ripple-effect>
+        </ion-card>
+      </ion-col>
+      
+      <ion-col class="ion-padding-start ion-padding-end" size="12" size-md="8" (click)="open('paint-requirements')">
+        <ion-card class="ion-activatable ripple-parent ion-no-margin ion-padding-top-4 ion-padding-bottom-4 col-btn" mode="ios">
+          <ion-row>
+            <ion-col size="2">
+              <ion-icon class="card-icon" name="color-palette-outline"></ion-icon>
+            </ion-col>
+            <ion-col size="10" class="ion-padding-end">
+              <ion-text>
+                <h3 class="card-title">Estimating Paint Requirements</h3>
+              </ion-text>
+              <p class="card-description">&nbsp;</p>
+            </ion-col>
+          </ion-row>
+          <ion-ripple-effect></ion-ripple-effect>
+        </ion-card>
+      </ion-col>
+      
+      <ion-col class="ion-padding-start ion-padding-end" size="12" size-md="8" (click)="open('painting-work')">
+        <ion-card class="ion-activatable ripple-parent ion-no-margin ion-padding-top-4 ion-padding-bottom-4 col-btn" mode="ios">
+          <ion-row>
+            <ion-col size="2">
+              <ion-icon class="card-icon" name="color-palette-outline"></ion-icon>
+            </ion-col>
+            <ion-col size="10" class="ion-padding-end">
+              <ion-text>
+                <h3 class="card-title">For Excellent Painting Work</h3>
+              </ion-text>
+              <p class="card-description">&nbsp;</p>
+            </ion-col>
+          </ion-row>
+          <ion-ripple-effect></ion-ripple-effect>
+        </ion-card>
+      </ion-col>
+      <ion-col class="ion-padding-start ion-padding-end" size="12" size-md="8" (click)="open('painting101')">
+        <ion-card class="ion-activatable ripple-parent ion-no-margin ion-padding-top-4 ion-padding-bottom-4 col-btn" mode="ios">
+          <ion-row>
+            <ion-col size="2">
+              <ion-icon class="card-icon" name="color-palette-outline"></ion-icon>
+            </ion-col>
+            <ion-col size="10" class="ion-padding-end">
+              <ion-text>
+                <h3 class="card-title">Painting 101</h3>
+              </ion-text>
+              <p class="card-description">&nbsp;</p>
+            </ion-col>
+          </ion-row>
+          <ion-ripple-effect></ion-ripple-effect>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

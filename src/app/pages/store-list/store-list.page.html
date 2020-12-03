@@ -1,0 +1,32 @@
+<ion-header mode="md">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button color="light" defaultHref="tabs/contact-us-tab"></ion-back-button>
+    </ion-buttons>
+    <ion-title color="light" class="ion-text-center ion-text-uppercase">
+      {{this.storeService.selectedStore.title}}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-row class="ion-justify-content-center ion-margin-top ion-margin-bottom">
+    <ion-col *ngFor="let row of this.storeService.selectedStore.branches; let i = index" 
+    class="ion-no-marign ion-no-padding" size="12" size-lg="8" >
+      
+      <ion-text *ngIf="(row.type !== undefined && !this.typesDisplayed.includes(row.type)) || this.validIndex.includes(i)" class="ion-text-center">
+        <h1><strong>{{row.type}}</strong><span *ngIf="hasType(row.type, i)"></span></h1>
+      </ion-text>
+      <ion-card class="store-card bg-white">
+        <ion-card-header [class.bg-white]="!row.active" [class.bg-red]="row.active" (click)="row.active = !row.active">
+          <ion-card-subtitle [class.text-primary]="!row.active" [class.text-light]="row.active" class="ion-text-center ion-text-uppercase"><strong>{{row.name}}</strong></ion-card-subtitle>
+        </ion-card-header>
+      
+        <ion-card-content [class.ion-hide]="!row.active" class="ion-text-center ion-margin-top">
+          <p><ion-icon class="store-icon ion-margin-end" color="danger" name="location" (click)="openMap(row.address)"></ion-icon>{{row.address}}</p>
+          <p *ngIf="row.contact.length > 0" ><ion-icon class="store-icon ion-margin-end" color="danger" name="call-outline" (click)="callPhone(row.contact)" ></ion-icon>{{row.contact}}</p>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-content>

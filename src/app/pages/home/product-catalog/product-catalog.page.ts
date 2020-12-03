@@ -10,11 +10,15 @@ import { NavController } from '@ionic/angular';
 })
 export class ProductCatalogPage implements OnInit {
 
+  searchText = '';
   constructor(
     public productService: ProductService,
     private navCtrl: NavController) { 
       console.log('Product Catalog Page Constructor');
       // Set Default
+      this.productService.selectedProductCategory.active = false;
+      this.productService.selectedProductCategory = this.productService.products[0];
+      this.productService.selectedProductCategory.active = true;
   }
 
   ngOnInit() {

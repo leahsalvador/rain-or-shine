@@ -14,7 +14,7 @@ import { File } from '@ionic-native/file/ngx';
 export class ProductService {
 
   products: ProductCategoryModel [];
-
+  searchProduct = false;
   allProducts: ProductModel [];
   allOriginal: ProductModel [];
   allPaintAndSeal: ProductModel [];
@@ -156,7 +156,7 @@ export class ProductService {
     this.allOriginal = [
       {
         title: 'ROS Classic',
-        subtitle: '',
+        subtitle: 'SEMI GLOSS TOP COAT',
         image: 'assets/products/Original/S-Classic.jpg',
         content: [
           {
@@ -407,7 +407,7 @@ export class ProductService {
         perLiter: 4
       },
       {
-        title: 'ROS Elasto-proofer',
+        title: 'ROS Elasto-Proofer',
         subtitle: 'Anti-efflorescence / Undercoat Primer',
         image: 'assets/products/Original/S-Elasto-Proofer.jpg',
         content: [
@@ -814,7 +814,7 @@ export class ProductService {
         perLiter: 4
       },
       {
-        title: 'ROS Prepa-white',
+        title: 'ROS Prepa-White',
         subtitle: 'Extra Hiding Water-based Primer',
         image: 'assets/products/Original/S-Prepa-White.jpg',
         content: [
@@ -1529,7 +1529,7 @@ export class ProductService {
   }
 
   initAllProducts(){
-    this.allProducts = [ ...this.allOriginal, ...this.allSista, ...this.allPaintAndSeal ];
+    this.allProducts = [ ...this.allSista, ...this.allOriginal, ...this.allPaintAndSeal ];
   }
 
   initColor(){
