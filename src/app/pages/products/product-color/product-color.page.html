@@ -27,7 +27,7 @@
   <ion-grid>
     <ion-row class="ion-justify-content-center ion-padding-top">
       <ion-col class="color-box-container" *ngFor="let color of this.productService.selectedProduct.color" 
-        size="2.2" [ngStyle]="{'background-color': color.hex}">
+        size="2.2" [ngStyle]="{'background-color': color.hex}"  (click)="viewColor(color)">
         <div class="color-box"></div>
         <p class="color-detail"[ngStyle]="{'color': color.dark ? '#000000' : '#ffffff'}" >{{color.name}}</p>
       </ion-col>

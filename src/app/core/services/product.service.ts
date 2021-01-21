@@ -155,8 +155,8 @@ export class ProductService {
   initOriginal(){
     this.allOriginal = [
       {
-        title: 'ROS Classic',
-        subtitle: 'SEMI GLOSS TOP COAT',
+        title: 'Classic',
+        subtitle: 'SEMI-GLOSS TOP COAT',
         image: 'assets/products/Original/S-Classic.jpg',
         content: [
           {
@@ -221,7 +221,7 @@ export class ProductService {
         perLiter: 4
       },
       {
-        title: 'ROS Dirt Shield',
+        title: 'Dirt Shield',
         subtitle: 'Dirt Resisting Paint, Semi-gloss Finish',
         image: 'assets/products/Original/S-Dirt Shield.jpg',
         content: [
@@ -283,7 +283,7 @@ export class ProductService {
         perLiter: 4
       },
       {
-        title: 'ROS ElastoFloor',
+        title: 'ElastoFloor',
         subtitle: 'Concrete Floor Paint',
         image: 'assets/products/Original/S-ElastoFloor.jpg',
         content: [
@@ -347,7 +347,7 @@ export class ProductService {
         perLiter: 4
       },
       {
-        title: 'ROS Elastomeric Paint',
+        title: 'Elastomeric Paint',
         subtitle: 'Colorful Protection for your Home',
         image: 'assets/products/Original/S-Elastomeric Waterproofing.jpg',
         content: [
@@ -407,7 +407,7 @@ export class ProductService {
         perLiter: 4
       },
       {
-        title: 'ROS Elasto-Proofer',
+        title: 'Elasto-Proofer',
         subtitle: 'Anti-efflorescence / Undercoat Primer',
         image: 'assets/products/Original/S-Elasto-Proofer.jpg',
         content: [
@@ -461,7 +461,7 @@ export class ProductService {
         perLiter: 4
       },
       {
-        title: 'ROS Elasto-Tex',
+        title: 'Elasto-Tex',
         subtitle: 'Water-based Textured Paint Interior and Exterior Walls',
         image: 'assets/products/Original/S-Elasto-Tex.jpg',
         content: [
@@ -508,7 +508,7 @@ export class ProductService {
         perLiter: 4
       },
       {
-        title: 'ROS Elasto-Tint',
+        title: 'Elasto-Tint',
         subtitle: 'Colorful Protection for your Home',
         image: 'assets/products/Original/S-Elasto-Tint.jpg',
         content: [
@@ -539,14 +539,14 @@ export class ProductService {
         color: []
       },
       {
-        title: 'ROS Fresco',
-        subtitle: 'Protect your Home, Protect your Family',
+        title: 'Fresco',
+        subtitle: 'ANTI-BACTERIAL PAINT',
         image: 'assets/products/Original/S-Fresco_Rise&Shine.jpg',
         content: [
           {
             title: 'Description',
             // tslint:disable-next-line:max-line-length
-            content: `<p>Rain or Shine Fresco is an Odourless and Antibacterial elastomeric paint. It has very low Volatile Organic
+            content: `<p>Rain or Shine Fresco is an odourless and antibacterial elastomeric paint. It has very low Volatile Organic
             Compound (VOC) level which means it emits less pollutants into the environment and has virtually no odour at all
             unlike ordinary paints. It also comes with Antibacterial property that inhibits the growth of disease-causing
             bacteria like Escherichia Coli (E. coli) and Staphylococcus Aureus. These properties are important especially
@@ -603,7 +603,7 @@ export class ProductService {
         perLiter: 4
       },
       {
-        title: 'ROS Fresco: Shine Plus',
+        title: 'Fresco: Shine Plus',
         subtitle: 'Shine Plus',
         image: 'assets/products/Original/S-Fresco_ShinePlus.jpg',
         content: [
@@ -611,7 +611,7 @@ export class ProductService {
             title: 'Description',
             // tslint:disable-next-line:max-line-length
             content: `<p>Rain or Shine Fresco Shine plus is a low-odour additive for Rain or Shine Fresco. A semi-gloss finish is achieved
-            when mixed with Rain or Shine Odourless and Antibacterial Interior Paint</p>`,
+            when mixed with Rain or Shine odourless and antibacterial Interior Paint</p>`,
             active: true,
           },
           {
@@ -627,7 +627,7 @@ export class ProductService {
         color: []
       },
       {
-        title: 'ROS Hi-Gloss',
+        title: 'Hi-Gloss',
         subtitle: 'Diamond Shine',
         image: 'assets/products/Original/S-Hi Gloss.jpg',
         content: [
@@ -692,7 +692,7 @@ export class ProductService {
         perLiter: 4
       },
       {
-        title: 'ROS Mastic Putty',
+        title: 'Mastic Putty',
         subtitle: 'Water-based Elastomeric Putty',
         image: 'assets/products/Original/S-Mastic Putty.jpg',
         content: [
@@ -753,7 +753,7 @@ export class ProductService {
         perLiter: 4
       },
       {
-        title: 'ROS Power Putty',
+        title: 'Power Putty',
         subtitle: 'High Quality & Heavy Duty Full Body Elastomeric Putty',
         image: 'assets/products/Original/S-Power Putty.jpg',
         content: [
@@ -814,7 +814,7 @@ export class ProductService {
         perLiter: 4
       },
       {
-        title: 'ROS Prepa-White',
+        title: 'Prepa-White',
         subtitle: 'Extra Hiding Water-based Primer',
         image: 'assets/products/Original/S-Prepa-White.jpg',
         content: [
@@ -867,7 +867,7 @@ export class ProductService {
         perLiter: 4
       },
       {
-        title: 'ROS Sun Roof',
+        title: 'Sun Roof',
         subtitle: 'Elastomeric Gloss Roof Paint',
         image: 'assets/products/Original/S-Sun Roof.jpg',
         content: [
@@ -921,7 +921,7 @@ export class ProductService {
         perLiter: 4
       },
       {
-        title: 'ROS Top White',
+        title: 'Top White',
         subtitle: 'Durable Elastomeric Top Coat',
         image: 'assets/products/Original/S-Top White.jpg',
         content: [
@@ -979,7 +979,7 @@ export class ProductService {
         perLiter: 4
       },
       {
-        title: 'ROS Xtra Gloss',
+        title: 'Xtra Gloss',
         subtitle: 'Colorful Protection for your Home',
         image: 'assets/products/Original/S-Xtra Gloss.jpg',
         content: [
@@ -1008,7 +1008,7 @@ export class ProductService {
   initPaintAndSeal(){
     this.allPaintAndSeal = [
       {
-        title: 'ROS Deck Seal',
+        title: 'Deck Seal',
         subtitle: 'Roof Deck Sealer',
         image: 'assets/products/Paint & Seal/S-Deck Seal.jpg',
         content: [
@@ -1066,7 +1066,7 @@ export class ProductService {
         perLiter: 4
       },
       {
-        title: 'ROS Hydro Lock',
+        title: 'Hydro Lock',
         subtitle: 'Superior Water proofer, Negative and Positive Pressure',
         image: 'assets/products/Paint & Seal/S-Hydro Lock.jpg',
         content: [
@@ -1112,7 +1112,7 @@ export class ProductService {
         perLiter: 4
       },
       {
-        title: 'ROS Roof Mastic',
+        title: 'Roof Mastic',
         subtitle: 'Paint and Sealant in One',
         image: 'assets/products/Paint & Seal/S-Roofmastic.jpg',
         content: [
@@ -1174,7 +1174,7 @@ export class ProductService {
         perLiter: 4
       },
       {
-        title: 'ROS Wall Mastic',
+        title: 'Wall Mastic',
         subtitle: 'Extreme Waterproofing Paint',
         image: 'assets/products/Paint & Seal/S-Wall Mastic.jpg',
         content: [

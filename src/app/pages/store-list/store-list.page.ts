@@ -41,8 +41,10 @@ export class StoreListPage implements OnInit {
   }
 
   hasType(type, i){
-    this.typesDisplayed.push(type);
-    this.validIndex.push(i);
-    console.log(this.typesDisplayed);
+    if ( ! this.typesDisplayed.includes(type)){
+      this.typesDisplayed.push(type);
+      this.validIndex.push(i);
+      console.log(this.typesDisplayed);
+    }
   }
 }
