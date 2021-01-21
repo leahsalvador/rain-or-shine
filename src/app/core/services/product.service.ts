@@ -19,6 +19,7 @@ export class ProductService {
   allOriginal: ProductModel [];
   allPaintAndSeal: ProductModel [];
   allSista: ProductModel [];
+  fromChoosePaint = false;
 
   selectedProductCategory: ProductCategoryModel;
   selectedProduct: ProductModel;

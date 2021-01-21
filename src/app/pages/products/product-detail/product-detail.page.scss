@@ -59,3 +59,28 @@ ion-card-header{
     --background-hover: unset;
     --background-activated: unset;
 }
+
+
+.category-container{
+    --ion-background-color: #ffffff !important;
+    --background:  #ffffff !important;
+    background:  #ffffff !important;
+}
+
+div.category{
+  white-space: nowrap;
+  overflow-x: auto !important;
+}
+.paint-color-image{
+    height: 120px;
+    width: 120px;
+    display: inline-block;
+    padding: 10px;
+    transform: scale(0.8);
+}
+.selected-color{
+    border: 2px solid var(--ion-color-primary);
+}
+.paint-color-image:hover{
+    transform: scale(1);
+}

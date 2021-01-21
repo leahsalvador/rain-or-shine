@@ -21,6 +21,7 @@ export class ChoosePaintPage implements OnInit {
   }
   
   viewProductDetail(product){
+    this.productService.fromChoosePaint = true;
     this.productService.selectedProduct = product;
     this.navCtrl.navigateForward('product-detail');
   }

@@ -53,3 +53,28 @@
     </ion-row>
   </ion-grid>
 </ion-content>
+<ion-footer>
+  
+  <ion-grid>
+    <ion-row class="ion-justify-content-center">
+      <ion-col *ngIf=" ! this.productService.fromChoosePaint"size="12" size-lg="8">
+        <div class="category">
+          <ion-img  *ngFor="let product of this.productService.selectedProductCategory.products" 
+            class="paint-color-image"
+            [src]="product.image"
+            [class.selected-color]="product.title == this.productService.selectedProduct.title"
+            tappable (click)="viewProductDetail(product)"></ion-img>
+        </div>
+      </ion-col>
+      <ion-col *ngIf="this.productService.fromChoosePaint"size="12" size-lg="8">
+        <div class="category">
+          <ion-img  *ngFor="let product of this.productService.rosCoverageProducts" 
+            class="paint-color-image"
+            [src]="product.image"
+            [class.selected-color]="product.title == this.productService.selectedProduct.title"
+            tappable (click)="viewProductDetail(product)"></ion-img>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-footer>

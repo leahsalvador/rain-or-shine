@@ -32,6 +32,7 @@ export class ProductCatalogPage implements OnInit {
 
   viewProductDetail(product){
     this.productService.selectedProduct = product;
+    this.productService.fromChoosePaint = false;
     this.navCtrl.navigateForward('product-detail');
   }
 }
