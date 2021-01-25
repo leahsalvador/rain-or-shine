@@ -2,7 +2,7 @@ import { ColorCaptureService } from './../../../core/services/color-capture.serv
 import { Component, OnInit } from '@angular/core';
 import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
 import { Dialogs } from '@ionic-native/dialogs/ngx';
-import { LoadingController, NavController } from '@ionic/angular';
+import { LoadingController, NavController, Platform } from '@ionic/angular';
 @Component({
   selector: 'app-color-capture',
   templateUrl: './color-capture.page.html',
@@ -22,6 +22,7 @@ export class ColorCapturePage implements OnInit {
   constructor(private camera: Camera, private dialogs: Dialogs,
               public loadingCtrl: LoadingController,
               private navCtrl: NavController,
+              public platform: Platform,
               private colorCaptureService: ColorCaptureService) { 
   }
 

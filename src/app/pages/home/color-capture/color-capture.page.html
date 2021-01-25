@@ -17,7 +17,7 @@
         <ion-button class="ion-margin cc-button" color="light" expand="block" size="large" tappable (click)="openCamera()">
           <ion-icon name="camera" class="ion-margin-end" color="primary" style="font-size: 4rem;"></ion-icon>
           <span class="cc-button-main">Camera</span></ion-button>
-          <ion-button class="ion-margin cc-button" color="light" fill="outline" expand="block" size="large" tappable  (click)="openGallery()">
+          <ion-button *ngIf=" ! platform.is('ios')"class="ion-margin cc-button" color="light" fill="outline" expand="block" size="large" tappable  (click)="openGallery()">
             <ion-icon name="images" class="ion-margin-end" style="font-size: 4rem;"></ion-icon>
             Gallery</ion-button>
       </ion-col>
