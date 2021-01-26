@@ -3,6 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
 import { Dialogs } from '@ionic-native/dialogs/ngx';
 import { LoadingController, NavController, Platform } from '@ionic/angular';
+import { Plugins, CameraResultType, Capacitor, FilesystemDirectory, CameraPhoto, CameraSource } from '@capacitor/core';
+
 @Component({
   selector: 'app-color-capture',
   templateUrl: './color-capture.page.html',
@@ -48,17 +50,21 @@ export class ColorCapturePage implements OnInit {
 
     //const loading = this.loadingCtrl.create();
 
-    //loading.present();
-    return this.getImage(this.camera.PictureSourceType.PHOTOLIBRARY).then(picture => {
-      if (picture) {
-        this.colorCaptureService.currentImage = picture;
-        // this.dialogs.alert(base64Image);
-        this.navCtrl.navigateForward('color-capture-viewer');
-      }
-      //loading.dismiss();
-    }, error => {
-      // this.dialogs.alert(error);
-    });
+    if(this.platform.is('ios')){
+      this.colorCaptureService.getPhotoFromGallery();
+    }else{
+      //loading.present();
+      return this.getImage(this.camera.PictureSourceType.PHOTOLIBRARY).then(picture => {
+        if (picture) {
+          this.colorCaptureService.currentImage = picture;
+          // this.dialogs.alert(base64Image);
+          this.navCtrl.navigateForward('color-capture-viewer');
+        }
+        //loading.dismiss();
+      }, error => {
+        // this.dialogs.alert(error);
+      });
+    }
   }
 
   // This method takes optional parameters to make it more customizable
