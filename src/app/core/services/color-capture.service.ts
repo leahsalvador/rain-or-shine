@@ -17,7 +17,6 @@ export class ColorCaptureService {
   async getPhotoFromGallery(){
     const image = await Camera.getPhoto({
       quality: 100,
-      allowEditing: true,
       resultType: CameraResultType.DataUrl,
       source: CameraSource.Photos
     });
