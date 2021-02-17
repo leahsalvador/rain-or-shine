@@ -95,10 +95,8 @@ export class GameplayPage implements AfterViewInit, OnInit {
       this.hasWriteAccess = true;
     }
  }
- 
 
   exitGame(){
-    
     this.exitGameAlert();
     /*this.dialogs.alert('Hello world')
       .then(() => console.log('Dialog dismissed'))
@@ -135,7 +133,7 @@ export class GameplayPage implements AfterViewInit, OnInit {
     const alert = await this.alertCtrl.create({
       cssClass: 'my-custom-class',
       header: 'Permission Request',
-      message: `This app requires the following permission to continue .`,
+      message: `This app requires the store permission to save the image .`,
       buttons: [
         {
           text: 'No',
@@ -181,7 +179,7 @@ export class GameplayPage implements AfterViewInit, OnInit {
     this.clickColor = new Array();
   }
 
-  exportCanvasImage(){
+  async exportCanvasImage(){
     const dataUrl = this.canvasElement.toDataURL(); 
     const data = dataUrl.split(',')[1];
 
@@ -190,28 +188,72 @@ export class GameplayPage implements AfterViewInit, OnInit {
     return;//*/
     // Clear the current canvas
     if (this.plt.is('cordova')) {
-      // this.dialogs.alert(dataUrl);
-      this.base64ToGallery.base64ToGallery(data, { prefix: '_img', mediaScanner:  true  }).then(
-        async res => {
-          const toast = await this.toastCtrl.create({
-            message: 'Image saved to gallery.',
-            duration: 2000
-          });
-          toast.present();
-          this.gameService.addCoin();
-          this.navCtrl.back();
-        },
-        async err => {
-          const toast = await this.toastCtrl.create({
-            message: 'Error saving image to gallery. This app requires storage permission. ' + err,
-            duration: 2000
-          });
-          this.checkPermissions();
-          // this.dialogs.alert(err);
-          toast.present();
-          console.log('Error saving image to gallery ', err);
-        }
-      );
+      if(this.plt.is('ios')){
+        const alert = await this.alertCtrl.create({
+          cssClass: 'my-custom-class',
+          header: 'Storage Permission',
+          message: `This will save the image to your gallery.`,
+          buttons: [
+            {
+              text: 'Cancel',
+              role: 'cancel',
+              cssClass: 'secondary',
+              handler: (blah) => {
+              }
+            }, {
+              text: 'Continue',
+              handler: () => {
+                 // this.dialogs.alert(dataUrl);
+                this.base64ToGallery.base64ToGallery(data, { prefix: '_img', mediaScanner:  true  }).then(
+                  async res => {
+                    const toast = await this.toastCtrl.create({
+                      message: 'Image saved to gallery.',
+                      duration: 2000
+                    });
+                    toast.present();
+                    this.gameService.addCoin();
+                    this.navCtrl.back();
+                  },
+                  async err => {
+                    const toast = await this.toastCtrl.create({
+                      message: 'Error saving image to gallery. This app requires storage permission. ' + err,
+                      duration: 2000
+                    });
+                    this.checkPermissions();
+                    // this.dialogs.alert(err);
+                    toast.present();
+                    console.log('Error saving image to gallery ', err);
+                  }
+                );
+              }
+            }
+          ]
+        });
+        await alert.present();
+      }else{
+        // this.dialogs.alert(dataUrl);
+        this.base64ToGallery.base64ToGallery(data, { prefix: '_img', mediaScanner:  true  }).then(
+          async res => {
+            const toast = await this.toastCtrl.create({
+              message: 'Image saved to gallery.',
+              duration: 2000
+            });
+            toast.present();
+            this.gameService.addCoin();
+            this.navCtrl.back();
+          },
+          async err => {
+            const toast = await this.toastCtrl.create({
+              message: 'Error saving image to gallery. This app requires storage permission. ' + err,
+              duration: 2000
+            });
+            this.checkPermissions();
+            // this.dialogs.alert(err);
+            toast.present();
+            console.log('Error saving image to gallery ', err);
+          }
+        );
+      }
 
       /*const options: Base64ToGallery = { prefix: 'canvas_', mediaScanner:  true };
   
