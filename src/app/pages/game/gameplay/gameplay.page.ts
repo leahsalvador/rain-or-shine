@@ -191,8 +191,8 @@ export class GameplayPage implements AfterViewInit, OnInit {
       if(this.plt.is('ios')){
         const alert = await this.alertCtrl.create({
           cssClass: 'my-custom-class',
-          header: 'Storage Permission',
-          message: `This will save the image to your gallery.`,
+          header: 'Save Image',
+          message: `Earn and unlock the next level by saving the image to your gallery.`,
           buttons: [
             {
               text: 'Cancel',
