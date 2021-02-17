@@ -277,6 +277,7 @@ export class GameplayPage implements AfterViewInit, OnInit {
       a.href = window.URL.createObjectURL(blob);
       a.download = 'canvasimage.png';
       document.body.appendChild(a);
+      this.gameService.addCoin();
       a.click();
       document.body.removeChild(a);
     }
