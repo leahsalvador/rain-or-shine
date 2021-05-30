@@ -22,9 +22,16 @@ export class DesignerSchemePage implements OnInit {
   select(data: DsTypeModel){
     this.scheme.types[0].active = false;
     this.scheme.types[1].active = false;
+    this.scheme.types[2].active = false;
+    this.scheme.types[3].active = false;
     data.active = true;//!data.active;
+    console.log(data.type);
     if(data.type === 'Interior'){
       this.scheme.selectedMenus = this.scheme.interior;
+    }else if(data.type === 'Floor'){
+      this.scheme.selectedMenus = this.scheme.floor;
+    }else if(data.type === 'Roof'){
+      this.scheme.selectedMenus = this.scheme.roof;
     }else{
       this.scheme.selectedMenus = this.scheme.exterior;
     }
@@ -32,6 +39,7 @@ export class DesignerSchemePage implements OnInit {
 
   selectMenu(data){
     this.scheme.selectedData = data;
+    console.log(this.scheme.selectedData);
     this.router.navigateByUrl('scheme-colors');
   }
 

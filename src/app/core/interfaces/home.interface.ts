@@ -4,4 +4,5 @@ export interface HomeModule{
     titleRow2: string;
     icon: string;
     id: string;
+    customicon ?: boolean;
 }

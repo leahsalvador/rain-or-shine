@@ -17,9 +17,9 @@
 
 <ion-content [fullscreen]="true">
   <ion-slides pager="true" [options]="slideOpts">
-    <ion-slide>
+    <!--<ion-slide>
       <ion-img src="assets/banner/Home-Banner.jpg"></ion-img>
-    </ion-slide>
+    </ion-slide>-->
     <ion-slide>
       <ion-img src="assets/banner/Home-Banner-SISTA.jpg"></ion-img>
     </ion-slide>
@@ -35,8 +35,8 @@
   </ion-slides>
   
   <ion-grid>
-    <ion-row>
-      <ion-col size="12">
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="12" size-lg="8">
           <ion-text class="ion-text-uppercase">
             <h1 class="title" style="margin-left: 10px  !important;">Guide</h1>
           </ion-text>
@@ -48,7 +48,7 @@
       </ion-col>
     </ion-row>
     <ion-row *ngFor="let row of this.gameService.gameDifficulties; let i = index" class="ion-justify-content-center">
-      <ion-col class="ion-padding-start ion-padding-end" size="12" size-md="8">
+      <ion-col class="ion-padding-start ion-padding-end" size="12" size-md="8" size-lg="8">
         <ion-text class="ion-text-uppercase">
           <h1 class="title">{{row.difficulty}}</h1>
         </ion-text>

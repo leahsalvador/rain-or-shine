@@ -42,7 +42,7 @@ export class ColorCapturePage implements OnInit {
     }, (err) => {
       // Handle error
       // this.dialogs.alert('error ' + err);
-      // this.navCtrl.navigateForward('color-capture-viewer');
+      //this.navCtrl.navigateForward('color-capture-viewer');
     });
   }
 

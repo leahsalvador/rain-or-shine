@@ -31,3 +31,11 @@ ion-card-title{
     line-height: 23px;
     color: var(--ion-color-dark) !important;
 }
+
+ion-card-title{
+    font-size: 1rem;
+    text-transform: uppercase !important;
+}
+ion-card-subtitle{
+    text-transform: none !important; 
+}

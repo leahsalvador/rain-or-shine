@@ -125,6 +125,10 @@ const routes: Routes = [
   {
     path: 'painting101',
     loadChildren: () => import('./painting101/painting101.module').then( m => m.Painting101PageModule)
+  },
+  {
+    path: 'search-page',
+    loadChildren: () => import('./pages/search-page/search-page.module').then( m => m.SearchPagePageModule)
   }
 ];
 @NgModule({

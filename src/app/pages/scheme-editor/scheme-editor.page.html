@@ -4,7 +4,7 @@
     <ion-back-button color="light" defaultHref="tabs/home-tab"></ion-back-button>
   </ion-buttons>
   <ion-title  color="light" class="ion-text-center ion-text-uppercase">
-    Designer Scheme
+    COLOR VISUALIZER
   </ion-title>
   <!--<ion-buttons slot="end">
     <ion-button  (click)="exportCanvasImage()">
@@ -24,8 +24,8 @@
   <ion-toolbar mode="md" class="category-container">
     <ion-grid class="ion-no-padding  ion-no-margin">
       <ion-row *ngIf="this.selectedColor !== undefined" class="ion-justify-content-center">
-        <ion-col size="12" [ngStyle]="{'background-color': this.selectedColor.hex, 'height': '5vh'}">   
-          <p class="color-detail">{{this.selectedColor.name}}</p>
+        <ion-col size="12" [ngStyle]="{'background-color': this.selectedColor.hex, 'height': '7vh'}">   
+          <p class="color-detail"><strong>{{this.selectedColor.name}}</strong><br/>{{this.selectedColor.code}}</p>
         </ion-col>
       </ion-row>
       <ion-row class="ion-justify-content-center">

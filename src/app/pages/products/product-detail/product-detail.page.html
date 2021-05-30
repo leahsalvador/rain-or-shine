@@ -26,12 +26,12 @@
 
   <ion-grid>
     <ion-row class="ion-justify-content-center ion-margin">
-      <ion-col size="12" *ngIf="this.productService.selectedProduct.hasPaintCalculator !== undefined">
+      <ion-col size="12" size-lg="8" *ngIf="this.productService.selectedProduct.hasPaintCalculator !== undefined">
         <ion-button color="primary" fill="outline" expand="block" shape="round" tappable (click)="viewPaintCalculator()">
           <ion-icon name="calculator-outline"></ion-icon>
           Paint Calculator</ion-button>
       </ion-col>
-      <ion-col size="12" *ngIf="this.productService.selectedProduct.color.length > 0">
+      <ion-col size="12" size-lg="8" *ngIf="this.productService.selectedProduct.color.length > 0">
         <ion-button color="primary" fill="outline" expand="block" shape="round" tappable (click)="viewProductColors()">
           <ion-icon name="color-palette-outline" ></ion-icon>
           Available Colors</ion-button>
@@ -53,13 +53,12 @@
     </ion-row>
   </ion-grid>
 </ion-content>
-<ion-footer>
-  
+<ion-footer *ngIf="this.productService.selectedProduct.suggestion !== undefined && this.productService.selectedProduct.suggestion.length > 0">
   <ion-grid>
     <ion-row class="ion-justify-content-center">
       <ion-col *ngIf=" ! this.productService.fromChoosePaint"size="12" size-lg="8">
         <div class="category">
-          <ion-img  *ngFor="let product of this.productService.selectedProductCategory.products" 
+          <ion-img  *ngFor="let product of this.productService.selectedProduct.suggestion" 
             class="paint-color-image"
             [src]="product.image"
             [class.selected-color]="product.title == this.productService.selectedProduct.title"
@@ -68,7 +67,7 @@
       </ion-col>
       <ion-col *ngIf="this.productService.fromChoosePaint"size="12" size-lg="8">
         <div class="category">
-          <ion-img  *ngFor="let product of this.productService.rosCoverageProducts" 
+          <ion-img  *ngFor="let product of this.productService.selectedProduct.suggestion" 
             class="paint-color-image"
             [src]="product.image"
             [class.selected-color]="product.title == this.productService.selectedProduct.title"

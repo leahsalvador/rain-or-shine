@@ -21,6 +21,7 @@ export class PaintCalculatorPage implements OnInit {
 
   viewProductDetail(product){
     this.productService.selectedProduct = product;
-    this.navCtrl.navigateForward('product-detail');
+    this.navCtrl.navigateForward('product-calculator');
+    //this.navCtrl.navigateForward('product-detail');
   }
 }

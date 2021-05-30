@@ -21,12 +21,19 @@ export class HomeTabPage implements OnInit {
 
   initialize(){
     this.homeModule = [
-      {
+      /*{
         title: 'Choose Paint',
         titleRow1: 'Choose',
         titleRow2: 'Paint',
         icon: 'color-fill-outline',
         id: 'choose-paint'
+      },//*/
+      {
+        title: 'Product Catalog',
+        titleRow1: 'Product',
+        titleRow2: 'Catalog',
+        icon: 'file-tray-full-outline',
+        id: 'product-catalog'
       },
       {
         title: 'Color Collections',
@@ -36,18 +43,12 @@ export class HomeTabPage implements OnInit {
         id: 'color-collections'
       },
       {
-        title: 'Designer Scheme',
-        titleRow1: 'Designer',
-        titleRow2: 'Scheme',
-        icon: 'pencil-outline',
+        title: 'COLOR VISUALIZER',
+        titleRow1: 'COLOR',
+        titleRow2: 'VISUALIZER',
+        icon: 'assets/paint-roller.svg',
+        customicon: true,
         id: 'designer-scheme'
-      },
-      {
-        title: 'Product Catalog',
-        titleRow1: 'Product',
-        titleRow2: 'Catalog',
-        icon: 'file-tray-full-outline',
-        id: 'product-catalog'
       },
       {
         title: 'Color Capture',
@@ -62,7 +63,7 @@ export class HomeTabPage implements OnInit {
         titleRow2: 'Calculator',
         icon: 'calculator-outline',
         id: 'paint-calculator'
-      },
+      },//*/
       {
         title: 'Painting Tips',
         titleRow1: 'Painting',
@@ -88,8 +89,8 @@ export class HomeTabPage implements OnInit {
 
 
   openSearchProduct(){
-    this.productService.searchProduct = true;
-    this.router.navigateByUrl('product-catalog');
+    //this.productService.searchProduct = true;
+    this.router.navigateByUrl('search-page');
   }
 
   open(link: string){

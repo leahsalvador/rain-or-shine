@@ -1,4 +1,5 @@
-import { ModalController } from '@ionic/angular';
+import { ProductService } from './../core/services/product.service';
+import { ModalController, Platform, NavController } from '@ionic/angular';
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
@@ -7,11 +8,23 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./color-view-modal.page.scss'],
 })
 export class ColorViewModalPage implements OnInit {
-  @Input() color: any;
+  color: any;
   constructor(
-    public modalController: ModalController) { }
+    public navCtrl: NavController, public productService: ProductService) { 
+      this.color = this.productService.color;
+    }
 
   ngOnInit() {
+  }
+
+  /*ngOnDestroy(){
+    this.platform.backButton.unsubscribe();
+  }//*/
+
+  closeModal(){
+    /*this.platform.backButton.observers.pop();
+    this.modalController.dismiss();//*/
+    this.navCtrl.back();
   }
 
 }

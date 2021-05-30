@@ -49,7 +49,8 @@
       <ion-col class="color-box-container" size="2.2" *ngFor="let color of this.productService.selectedColorCollection.colors" [ngStyle]="{'background-color': color.hex}"
       (click)="viewColor(color)">
         <div class="color-box"></div>
-        <p class="color-detail"[ngStyle]="{'color': color.dark ? '#000000' : '#ffffff'}" >{{color.name}}</p>
+        <p class="color-detail" [ngStyle]="{'color': color.dark ? '#000000' : '#ffffff'}" >
+          <span style="font-weight:900;">{{color.name}}</span><br/>{{color.code}}</p>
       </ion-col>
     </ion-row>
   </ion-grid>

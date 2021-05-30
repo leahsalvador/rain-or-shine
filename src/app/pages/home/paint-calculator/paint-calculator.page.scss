@@ -19,6 +19,10 @@ ion-card{
 }
 ion-card-title{
     font-size: 1rem;
+    text-transform: uppercase !important;
+}
+ion-card-subtitle{
+    text-transform: none !important; 
 }
 
 .product-list-img{

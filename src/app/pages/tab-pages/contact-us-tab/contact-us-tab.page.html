@@ -20,7 +20,7 @@
               <ion-text>
                 <h3 class="card-title">Professional Painting Service</h3>
               </ion-text>
-              <p class="card-description">8-682-8888 / 8-645-0807</p>
+              <p class="card-description"><span (click)="callPhone('(02) 8-682-8888')">(02) 8-682-8888</span> / <span (click)="callPhone('(02) 8-682-8888')">(02) 8-645-0807</span></p>
             </ion-col>
           </ion-row>
           <ion-ripple-effect></ion-ripple-effect>
@@ -30,13 +30,14 @@
         <ion-card class="ion-activatable ripple-parent ion-no-margin ion-padding-top-4 ion-padding-bottom-4 col-btn" mode="ios">
           <ion-row>
             <ion-col size="2">
-              <ion-icon class="card-icon" name="information-circle-outline"></ion-icon>
+              <ion-icon class="card-icon" name="mail-outline"></ion-icon>
             </ion-col>
             <ion-col size="10" class="ion-padding-end">
+              <a href="mailto:info@rainorshinepaint.com" style="text-decoration: none;">
               <ion-text>
                 <h3 class="card-title">General Inquiry</h3>
               </ion-text>
-              <p class="card-description">info@rainorshinepaint.com</p>
+              <p class="card-description" style="color: #666666;">info@rainorshinepaint.com</p></a>
             </ion-col>
           </ion-row>
           <ion-ripple-effect></ion-ripple-effect>
@@ -46,47 +47,15 @@
         <ion-card class="ion-no-margin ion-padding-top-4 ion-padding-bottom-4 col-btn" mode="ios">
           <ion-row>
             <ion-col size="2">
-              <ion-icon class="card-icon" name="mail-outline"></ion-icon>
+              <ion-icon class="card-icon" name="call-outline"></ion-icon>
             </ion-col>
             <ion-col size="10" class="ion-padding-end">
               <ion-text>
                 <h3 class="card-title">Contact Us</h3>
               </ion-text>
-              <p class="card-description">For your suggestions or feedback</p>
-              <p class="card-description"><ion-text color="primary" (click)="callPhone('8-682-8888')"><strong>8-682-8888</strong></ion-text> / 
-                <ion-text color="primary" (click)="callPhone('8-645-0807')"><strong>8-645-0807</strong></ion-text></p>
-            </ion-col>
-          </ion-row>
-          <ion-ripple-effect></ion-ripple-effect>
-        </ion-card>
-      </ion-col>
-      <ion-col class="ion-padding-start ion-padding-end ion-hide" size="12" size-md="8" (click)="open('faq')">
-        <ion-card class="ion-activatable ripple-parent ion-no-margin ion-padding-top-4 ion-padding-bottom-4 col-btn" mode="ios">
-          <ion-row>
-            <ion-col size="2">
-              <ion-icon class="card-icon" name="help-circle-outline"></ion-icon>
-            </ion-col>
-            <ion-col size="10" class="ion-padding-end">
-              <ion-text>
-                <h3 class="card-title">FAQ</h3>
-              </ion-text>
-              <p class="card-description">Frequently asked questions</p>
-            </ion-col>
-          </ion-row>
-          <ion-ripple-effect></ion-ripple-effect>
-        </ion-card>
-      </ion-col>
-      <ion-col class="ion-padding-start ion-padding-end ion-hide" size="12" size-md="8" (click)="open('disclaimer')">
-        <ion-card class="ion-activatable ripple-parent ion-no-margin ion-padding-top-4 ion-padding-bottom-4 col-btn" mode="ios">
-          <ion-row>
-            <ion-col size="2">
-              <ion-icon class="card-icon" name="warning-outline"></ion-icon>
-            </ion-col>
-            <ion-col size="10" class="ion-padding-end">
-              <ion-text>
-                <h3 class="card-title">Disclamer</h3>
-              </ion-text>
-              <p class="card-description">Color accuracy statement</p>
+              <p class="card-description">For your suggestion, feedback or others</p>
+              <p class="card-description"><ion-text color="primary" (click)="callPhone('(02) 8-682-8888 ')"><strong>(02) 8-682-8888 </strong></ion-text> / 
+                <ion-text color="primary" (click)="callPhone('(02) 8-645-0807')"><strong>(02) 8-645-0807</strong></ion-text></p>
             </ion-col>
           </ion-row>
           <ion-ripple-effect></ion-ripple-effect>
@@ -103,6 +72,38 @@
                 <h3 class="card-title">Policy</h3>
               </ion-text>
               <p class="card-description">Handling of personal information</p>
+            </ion-col>
+          </ion-row>
+          <ion-ripple-effect></ion-ripple-effect>
+        </ion-card>
+      </ion-col>
+      <ion-col class="ion-padding-start ion-padding-end" size="12" size-md="8" (click)="open('faq')">
+        <ion-card class="ion-activatable ripple-parent ion-no-margin ion-padding-top-4 ion-padding-bottom-4 col-btn" mode="ios">
+          <ion-row>
+            <ion-col size="2">
+              <ion-icon class="card-icon" name="help-circle-outline"></ion-icon>
+            </ion-col>
+            <ion-col size="10" class="ion-padding-end">
+              <ion-text>
+                <h3 class="card-title">FAQ</h3>
+              </ion-text>
+              <p class="card-description">Frequently asked questions</p>
+            </ion-col>
+          </ion-row>
+          <ion-ripple-effect></ion-ripple-effect>
+        </ion-card>
+      </ion-col>
+      <ion-col class="ion-padding-start ion-padding-end" size="12" size-md="8" (click)="open('disclaimer')">
+        <ion-card class="ion-activatable ripple-parent ion-no-margin ion-padding-top-4 ion-padding-bottom-4 col-btn" mode="ios">
+          <ion-row>
+            <ion-col size="2">
+              <ion-icon class="card-icon" name="warning-outline"></ion-icon>
+            </ion-col>
+            <ion-col size="10" class="ion-padding-end">
+              <ion-text>
+                <h3 class="card-title">Disclamer</h3>
+              </ion-text>
+              <p class="card-description">Color accuracy statement</p>
             </ion-col>
           </ion-row>
           <ion-ripple-effect></ion-ripple-effect>

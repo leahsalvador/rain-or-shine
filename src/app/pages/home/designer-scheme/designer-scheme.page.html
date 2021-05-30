@@ -1,10 +1,10 @@
-<ion-header>
+<ion-header mode="md">
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-back-button color="light" defaultHref="tabs/home-tab"></ion-back-button>
     </ion-buttons>
     <ion-title color="light" class="ion-text-center ion-text-uppercase">
-      Designer Scheme
+      COLOR VISUALIZER
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -26,12 +26,17 @@
 </ion-toolbar>
 <ion-content>
   <ion-grid>
-    <ion-row class="ion-justify-content-center">
+    <ion-row *ngIf="this.scheme.selectedMenus !== undefined && this.scheme.selectedMenus.length > 0"class="ion-justify-content-center">
       <ion-col *ngFor="let row of this.scheme.selectedMenus" class="ion-no-margin ion-no-padding" size="12" size-md="8">
         <ion-card class="ion-activatable ripple-parent bg-white" mode="md" (click)="selectMenu(row)">
           <ion-img [src]="row.src1"></ion-img>
           <ion-ripple-effect></ion-ripple-effect>
         </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row *ngIf="this.scheme.selectedMenus === undefined || this.scheme.selectedMenus.length <= 0"class="ion-justify-content-center">
+      <ion-col class="ion-no-margin ion-no-padding" size="12" size-md="8">
+        <h1 class="ion-text-center">Coming soon!</h1>
       </ion-col>
     </ion-row>
   </ion-grid>

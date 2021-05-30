@@ -23,8 +23,8 @@
         </ion-card-header>
       
         <ion-card-content [class.ion-hide]="!row.active" class="ion-text-center ion-margin-top">
-          <p><ion-icon class="store-icon ion-margin-end" color="danger" name="location" (click)="openMap(row.address)"></ion-icon>{{row.address}}</p>
-          <p *ngIf="row.contact.length > 0" ><ion-icon class="store-icon ion-margin-end" color="danger" name="call-outline" (click)="callPhone(row.contact)" ></ion-icon>{{row.contact}}</p>
+          <p  (click)="openMap(row.address)"><ion-icon class="store-icon ion-margin-end" color="danger" name="location"></ion-icon>{{row.address}}</p>
+          <p *ngIf="row.contact.length > 0"  (click)="callPhone(row.contact)" ><ion-icon class="store-icon ion-margin-end" color="danger" name="call-outline"></ion-icon>{{row.contact}}</p>
         </ion-card-content>
       </ion-card>
     </ion-col>

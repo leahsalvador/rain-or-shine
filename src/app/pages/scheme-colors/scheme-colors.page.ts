@@ -1,3 +1,4 @@
+import { SchemeService } from './../../core/services/scheme.service';
 import { NavController } from '@ionic/angular';
 import { ProductService } from './../../core/services/product.service';
 import { Component, OnInit } from '@angular/core';
@@ -12,7 +13,9 @@ export class SchemeColorsPage implements OnInit {
 
   constructor(
     public productService: ProductService,
+    public scheme: SchemeService,
     private navCtrl: NavController) { 
+      console.log(this.scheme.selectedData);
   }
 
   ngOnInit() {

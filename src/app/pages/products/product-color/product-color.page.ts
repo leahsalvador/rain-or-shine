@@ -1,5 +1,5 @@
 import { ColorViewModalPage } from './../../../color-view-modal/color-view-modal.page';
-import { ModalController } from '@ionic/angular';
+import { ModalController, NavController } from '@ionic/angular';
 import { ProductService } from './../../../core/services/product.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -12,7 +12,8 @@ export class ProductColorPage implements OnInit {
 
   constructor(
     public productService: ProductService,
-    public modalController: ModalController
+    public modalController: ModalController,
+    public navCtrl: NavController
     ) { 
       console.log('Product Color Page Constructor');
   }
@@ -21,7 +22,7 @@ export class ProductColorPage implements OnInit {
   }
 
   async viewColor(color) {
-    const modal = await this.modalController.create({
+    /*const modal = await this.modalController.create({
       component: ColorViewModalPage,
       cssClass: 'view-color-modal-class',
       backdropDismiss: false,
@@ -30,6 +31,8 @@ export class ProductColorPage implements OnInit {
         color
       }
     });
-    await modal.present();
+    await modal.present();//*/
+    this.productService.color = color;
+    this.navCtrl.navigateForward('color-view-modal');
   }
 }

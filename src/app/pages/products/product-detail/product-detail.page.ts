@@ -25,8 +25,13 @@ export class ProductDetailPage implements OnInit {
     this.navCtrl.navigateForward('product-calculator');
   }
   
-  viewProductDetail(product){
-    this.productService.selectedProduct = product;
+  viewProductDetail(product: any){
+    console.log(product);
+    if(product.type == 'original'){
+      this.productService.selectedProduct = this.productService.allOriginal[product.index];
+    }else if(product.type == 'paint-and-seal'){
+      this.productService.selectedProduct = this.productService.allPaintAndSeal[product.index];
+    }
   }
 
 }

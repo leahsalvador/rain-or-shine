@@ -3,7 +3,7 @@ import { ColorCollectionModel } from './../../../core/interfaces/color-collecito
 import { ProductColor } from './../../../core/interfaces/product/product-color.interface';
 import { ProductService } from './../../../core/services/product.service';
 import { Component, OnInit } from '@angular/core';
-import { ModalController } from '@ionic/angular';
+import { ModalController, NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-color-collections',
@@ -14,7 +14,8 @@ export class ColorCollectionsPage implements OnInit {
 
   constructor(
     public productService: ProductService,
-    public modalController: ModalController
+    public modalController: ModalController,
+    private navCtrl: NavController
   ) { 
   }
 
@@ -28,7 +29,7 @@ export class ColorCollectionsPage implements OnInit {
   }
 
   async viewColor(color) {
-    const modal = await this.modalController.create({
+    /*const modal = await this.modalController.create({
       component: ColorViewModalPage,
       cssClass: 'view-color-modal-class',
       backdropDismiss: false,
@@ -37,6 +38,9 @@ export class ColorCollectionsPage implements OnInit {
         color
       }
     });
-    await modal.present();
+    await modal.present();//*/
+    
+    this.productService.color = color;
+    this.navCtrl.navigateForward('color-view-modal');
   }
 }

@@ -1,34 +1,28 @@
-<!--<ion-header mode="md">
-  <ion-toolbar>
-    <ion-title color="light" class="ion-text-center ion-text-uppercase">
-      About Us
-    </ion-title>
-  </ion-toolbar>
-</ion-header>-->
+<ion-header class="ion-no-border" style="height: 30px; background-color: transparent !important; --background: transparent !important;  ">
+</ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-row class="ion-justify-content-center bg-primary">
     <ion-col class="ion-padding-start ion-padding-end" size="12" size-md="8">
       <ion-item lines="none">
-        <ion-img src="assets/icon/ROS.png" id="home-logo"></ion-img>
+        <ion-img src="assets/icon/favicon.png" id="home-logo"></ion-img>
       </ion-item>
       <ion-text color="light" class="ion-no-margin">
-        <p id="home-top-text" class="ion-text-center">Colorful <span class="ion-text-uppercase">protection</span> for your 
-            <span class="ion-text-uppercase home-span-color">home</span></p>
+        <p id="home-top-text" class="ion-text-center">Colorful Protection for your Home</p>
       </ion-text>
     </ion-col>
   </ion-row>
   <ion-img src="assets/banner/banner.jpg"></ion-img>
-  <ion-grid class="ion-no-padding">
+  <ion-grid class="ion-no-padding" style="background-color: #f3f3f3;">
     <ion-row class="ion-justify-content-center">
-      <ion-col class="ion-padding-start ion-padding-end" size="12" size-md="8">
+      <ion-col class="ion-padding-start ion-padding-end" size="12" size-md="8" style="background-color: #f3f3f3;">
         <ion-text class="ion-text-uppercase">
           <h1 class="about-title">About Us</h1>
         </ion-text>
         <p class="about-text">Rain or Shine (ROS) Elastomeric Waterproofing Paint is the flagship brand of Asian
           Coatings Philippines
           Incorporated. It is one of the leading paint manufacturers in the Philippines. The company started
-          manufacturing high quality house paints in1992 and with the foresight of its visionary leader, the company
+          manufacturing high quality house paints in 1992 and with the foresight of its visionary leader, the company
           ventured into making superior elastomeric waterproofing paint in 2004 under the brand name Rain or Shine
           (ROS). <ion-text color="tertiary" [class.ion-hide]="!seeMore" (click)="this.seeMore = false"><strong>See more...</strong></ion-text></p>
         <p class="about-text" [class.ion-hide]="seeMore">
@@ -55,15 +49,14 @@
           regards to paints even if you used other brands.</p>
 
         <p class="about-text">We at Rain or Shine are committed to provide you a nice painting experience with our
-          service on wheels and will
-          make sure that your project is protected against water penetration and harsh elements.</p>
+          service on wheels and will make sure that your project is protected against water penetration and harsh elements.</p>
 
-        <p class="about-text"><span class="quote">"Don't just use any paint, with Rain or Shine you are
-            protected."</span></p>
+        <p class="about-text"><span class="quote">"Don't just use any paint, with Rain or Shine you are protected."</span></p>
             <br/><br/>
+            <p class="about-text">&nbsp;</p>
       </ion-col>
     </ion-row>
-    <ion-row class="ion-justify-content-center">
+    <!--<ion-row class="ion-justify-content-center">
       <ion-col class="video-con ion-padding-start ion-padding-end bg-white" size="12" size-md="8">
         <h1 class="about-title">Videos</h1>
       </ion-col>
@@ -106,6 +99,6 @@
             <h5 class="video-title">Sista</h5>
           </ion-text>
       </ion-col>
-    </ion-row>
+    </ion-row>-->
   </ion-grid>
 </ion-content>

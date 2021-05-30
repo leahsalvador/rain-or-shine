@@ -27,8 +27,21 @@
     (touchmove)="canvasMouseMove($event)"></canvas>
     -->
 </ion-content>
-<ion-footer>
-  <ion-toolbar mode="md" class="category-container">
+<ion-footer style="height: 30vh;">
+  <ion-toolbar style="height: 100% !important; overflow: auto;">
+    <ion-grid class="ion-no-padding">
+      <ion-row>
+          <ion-col *ngFor="let color of this.productService.colorsSearch" class="color-box-container ion-no-margin"
+            [ngStyle]="{'background-color': color.hex}" [class.ion-hide]=" ! checkColorSearch(color)" size="3" size-sm="3"
+            (click)="viewColor(color)">
+            <div class="color-box"></div>
+            <p class="color-detail" [ngStyle]="{'color': color.dark ? '#000000' : '#ffffff'}" >
+              <span style="font-weight:900;">{{color.name}}</span><br/>{{color.code}}</p>
+          </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+  <!--<ion-toolbar mode="md" class="category-container">
     <ion-grid class="ion-no-padding  ion-margin-start ion-margin-end">
       <ion-row class="ion-justify-content-center">
         <ion-col size="12" [ngStyle]="{'background-color': currentColor, 'height': '20vh'}">   
@@ -45,5 +58,6 @@
         </ion-col>
       </ion-row>
     </ion-grid>
-  </ion-toolbar>
+  </ion-toolbar>-->
+  
 </ion-footer>

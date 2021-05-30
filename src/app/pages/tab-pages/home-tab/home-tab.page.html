@@ -1,10 +1,5 @@
-<!--<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Home
-    </ion-title>
-  </ion-toolbar>
-</ion-header>-->
+<ion-header class="ion-no-border" style="height: 30px; background-color: transparent !important; --background: transparent !important;  ">
+</ion-header>
 
 <ion-content padding [fullscreen]="true">
   <ion-grid>
@@ -12,19 +7,20 @@
     <ion-row class="ion-justify-content-center">
       <ion-col class="ion-padding-start ion-padding-end" size="12" size-md="8">
         <ion-item lines="none">
-          <ion-img src="assets/icon/ROS.png" id="home-logo"></ion-img>
+          <ion-img src="assets/icon/favicon.png" id="home-logo"></ion-img>
         </ion-item>
         <ion-text color="light" class="ion-no-margin">
-          <p id="home-top-text" class="ion-text-center">Colorful Protection for your Home.</p>
+          <p id="home-top-text" class="ion-text-center">Colorful Protection for your Home</p>
         </ion-text>
-        <ion-searchbar color="light"  placeholder="Search Product" (click)="openSearchProduct();"></ion-searchbar>
+        <ion-searchbar color="light"  placeholder="Search" (click)="openSearchProduct();"></ion-searchbar>
       </ion-col>
     </ion-row>
     <ion-row class="ion-justify-content-center"> 
       <ion-col *ngFor="let item of homeModule" id="{{item.id}}" tappable (click)="open(item.id)" 
           class="ion-padding-start ion-padding-end " size="12" size-md="8">
         <ion-item button mode="md" lines="none" class="col-btn ion-padding-top-8 ion-padding-bottom-8 ion-activatable ripple-parent">
-          <ion-icon color="light" [name]="item.icon" slot="start" class="home-btn-icon ion-margin-start ion-padding-start"></ion-icon>
+          <ion-icon *ngIf="item.customicon === undefined "color="light" [name]="item.icon" slot="start" class="home-btn-icon ion-margin-start ion-padding-start"></ion-icon>
+          <img  *ngIf="item.customicon"  class="home-btn-icon ion-margin-start ion-padding-start"  [src]="item.icon" style="height: 40px;"/>
           <ion-text color="light" slot="end" class="">
             <h3 class="home-btn-label">{{item.titleRow1}}<br/>{{item.titleRow2}}</h3>
           </ion-text>

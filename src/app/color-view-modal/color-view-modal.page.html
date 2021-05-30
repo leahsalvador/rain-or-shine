@@ -1,7 +1,7 @@
 <ion-header mode="md" class="ion-no-border">
   <ion-toolbar>
     <ion-buttons slot="end">
-      <ion-button (click)="this.modalController.dismiss();">
+      <ion-button (click)="closeModal()">
         <ion-icon slot="icon-only" name="close" color="light"></ion-icon>
       </ion-button>
     </ion-buttons>
@@ -20,7 +20,7 @@
   <ion-grid class="">
     <ion-row class="ion-justify-content-center">
       <ion-text class="ion-text-center">
-        <h3><strong>{{color.name}}</strong></h3>
+        <h3><strong>{{color.name}}</strong><br/>{{color.code}}</h3>
       </ion-text>
     </ion-row>
   </ion-grid>
