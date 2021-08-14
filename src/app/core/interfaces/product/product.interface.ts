@@ -4,6 +4,7 @@ export interface ProductModel{
     title: string;
     subtitle ?: string;
     type ?: string;
+    type2 ?: string;
     image: string;
     content ?: ProductContentModel [];
     color ?: ProductColor [];

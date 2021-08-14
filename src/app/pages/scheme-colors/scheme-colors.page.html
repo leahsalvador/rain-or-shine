@@ -14,7 +14,7 @@
   <ion-grid class="ion-margin-top">
     <ion-row class="ion-justify-content-center">
       <div *ngFor="let product of this.productService.rosCoverageProducts">
-        <ion-col *ngIf="product.color !== undefined && product.color.length > 0 && (this.scheme.selectedData.type === product.type || product.type === undefined)" class="ion-no-margin ion-no-padding" size="12" size-lg="8">
+        <ion-col *ngIf="product.color !== undefined && product.color.length > 0 && (this.scheme.selectedData.type === product.type || product.type === undefined) && (product.type2 === undefined || (this.scheme.selectedData.type2 !== undefined && product.type2 !== undefined && product.type2 == this.scheme.selectedData.type2))" class="ion-no-margin ion-no-padding" size="12" size-lg="8">
           <ion-card mode="ios" class="ion-activatable ripple-parent" tappable (click)="viewProductDetail(product)">
             <ion-row>
               <ion-col size="3" size-lg="3">

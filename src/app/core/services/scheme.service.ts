@@ -26,16 +26,16 @@ export class SchemeService {
     ];
 
     this.interior = [
-      {type: 'wall', src1: 'assets/Interior/Interior-1.jpg', src2: 'assets/Interior/Interior-1a.png', src3: 'assets/Interior/Interior-1b.png'} as DsMenuModel,
-      {type: 'wall', src1: 'assets/Interior/Interior-2.jpg', src2: 'assets/Interior/Interior-2a.png', src3: 'assets/Interior/Interior-2b.png'} as DsMenuModel,
-      {type: 'wall', src1: 'assets/Interior/Interior-3.jpg', src2: 'assets/Interior/Interior-3a.png', src3: 'assets/Interior/Interior-3b.png'} as DsMenuModel,
-      {type: 'wall', src1: 'assets/Interior/Interior-4.jpg', src2: 'assets/Interior/Interior-4a.png', src3: 'assets/Interior/Interior-4b.png'} as DsMenuModel,
-      {type: 'wall', src1: 'assets/Interior/Interior-5.jpg', src2: 'assets/Interior/Interior-5a.png', src3: 'assets/Interior/Interior-5b.png'} as DsMenuModel,
-      {type: 'wall', src1: 'assets/Interior/Interior-6.jpg', src2: 'assets/Interior/Interior-6a.png', src3: ''} as DsMenuModel,
-      {type: 'wall', src1: 'assets/Interior/Interior-7.jpg', src2: 'assets/Interior/Interior-7a.png', src3: ''} as DsMenuModel,
-      {type: 'wall', src1: 'assets/Interior/Interior-8.jpg', src2: 'assets/Interior/Interior-8a.png', src3: ''} as DsMenuModel,
-      {type: 'wall', src1: 'assets/Interior/Interior-9.jpg', src2: 'assets/Interior/Interior-9a.png', src3: ''} as DsMenuModel,
-      {type: 'wall', src1: 'assets/Interior/Interior-10.jpg', src2: 'assets/Interior/Interior-10a.png', src3: ''} as DsMenuModel,
+      {type: 'wall', type2: 'interior', src1: 'assets/Interior/Interior-1.jpg', src2: 'assets/Interior/Interior-1a.png', src3: 'assets/Interior/Interior-1b.png'} as DsMenuModel,
+      {type: 'wall', type2: 'interior', src1: 'assets/Interior/Interior-2.jpg', src2: 'assets/Interior/Interior-2a.png', src3: 'assets/Interior/Interior-2b.png'} as DsMenuModel,
+      {type: 'wall', type2: 'interior', src1: 'assets/Interior/Interior-3.jpg', src2: 'assets/Interior/Interior-3a.png', src3: 'assets/Interior/Interior-3b.png'} as DsMenuModel,
+      {type: 'wall', type2: 'interior', src1: 'assets/Interior/Interior-4.jpg', src2: 'assets/Interior/Interior-4a.png', src3: 'assets/Interior/Interior-4b.png'} as DsMenuModel,
+      {type: 'wall', type2: 'interior', src1: 'assets/Interior/Interior-5.jpg', src2: 'assets/Interior/Interior-5a.png', src3: 'assets/Interior/Interior-5b.png'} as DsMenuModel,
+      {type: 'wall', type2: 'interior', src1: 'assets/Interior/Interior-6.jpg', src2: 'assets/Interior/Interior-6a.png', src3: ''} as DsMenuModel,
+      {type: 'wall', type2: 'interior', src1: 'assets/Interior/Interior-7.jpg', src2: 'assets/Interior/Interior-7a.png', src3: ''} as DsMenuModel,
+      {type: 'wall', type2: 'interior', src1: 'assets/Interior/Interior-8.jpg', src2: 'assets/Interior/Interior-8a.png', src3: ''} as DsMenuModel,
+      {type: 'wall', type2: 'interior', src1: 'assets/Interior/Interior-9.jpg', src2: 'assets/Interior/Interior-9a.png', src3: ''} as DsMenuModel,
+      {type: 'wall', type2: 'interior', src1: 'assets/Interior/Interior-10.jpg', src2: 'assets/Interior/Interior-10a.png', src3: ''} as DsMenuModel,
     ];
 
     this.exterior = [

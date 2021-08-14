@@ -15,6 +15,12 @@
 }
 .product-header{
     padding-bottom: 0;
+    ion-card-title{
+        text-transform: uppercase !important;
+    }
+    ion-card-subtitle{
+        text-transform: none !important; 
+    }
 }
 
 .product-content p{
