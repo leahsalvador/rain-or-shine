@@ -47,9 +47,10 @@ export class ProductCalculatorPage implements OnInit {
     if(event.target.value){
       const input = parseFloat(event.target.value);
       if(input >= this.productService.selectedProduct.min && input <=this.productService.selectedProduct.max){
-        this.productService.paintCalculatorProduct = this.productService.selectedProduct.perLiter
+        this.productService.paintCalculatorProduct = this.productService.selectedProduct.perLiter;
       }else{
         this.productService.paintCalculatorProduct = (input / this.productService.selectedProduct.min) * this.productService.selectedProduct.perLiter;
+        this.productService.paintCalculatorProduct = Math.floor(this.productService.paintCalculatorProduct);
       }
     }
   }
@@ -75,9 +76,9 @@ export class ProductCalculatorPage implements OnInit {
   }
 
   convertToFt2(){
-    this.ft2 = this.m2 * 10.764;
+    this.ft2 = parseFloat((this.m2 * 10.764).toFixed(2));
   }
   convertToM2(){
-    this.m2 = this.ft2 / 10.764;
+    this.m2 = parseFloat((this.ft2 / 10.764).toFixed(2));
   }
 }

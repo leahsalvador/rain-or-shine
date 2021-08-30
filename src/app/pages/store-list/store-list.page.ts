@@ -1,3 +1,4 @@
+import { EmailComposer } from '@ionic-native/email-composer/ngx';
 import { LoadingController } from '@ionic/angular';
 import { CallNumber } from '@ionic-native/call-number/ngx';
 import { StoreService } from './../../core/services/store.service';
@@ -17,7 +18,8 @@ export class StoreListPage implements OnInit {
   constructor(
     public storeService: StoreService,
     private callNumber: CallNumber,
-    private loadingController: LoadingController
+    private loadingController: LoadingController,
+    private emailComposer: EmailComposer
   ) { }
 
   ngOnInit() {
@@ -47,4 +49,13 @@ export class StoreListPage implements OnInit {
       console.log(this.typesDisplayed);
     }
   }
+  sendEmail(storeEmail){
+    let email = {
+      to: storeEmail,
+      subject: 'General Inquiry',
+    };
+    // Send a text message using default options
+    this.emailComposer.open(email);
+  }
+  
 }

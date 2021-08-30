@@ -24,7 +24,13 @@
       
         <ion-card-content [class.ion-hide]="!row.active" class="ion-text-center ion-margin-top">
           <p  (click)="openMap(row.address)"><ion-icon class="store-icon ion-margin-end" color="danger" name="location"></ion-icon>{{row.address}}</p>
+          <p *ngIf="row.storeHours !== undefined && row.storeHours.length > 0"><ion-icon class="store-icon ion-margin-end" color="danger" name="time-outline"></ion-icon>{{row.storeHours}}</p>
           <p *ngIf="row.contact.length > 0"  (click)="callPhone(row.contact)" ><ion-icon class="store-icon ion-margin-end" color="danger" name="call-outline"></ion-icon>{{row.contact}}</p>
+          <p *ngIf="row.contact1 !== undefined && row.contact1.length > 0" (click)="callPhone(row.contact1)" ><ion-icon class="store-icon ion-margin-end" color="danger" name="call-outline"></ion-icon>{{row.contact1}}</p>
+          <p *ngIf="row.contact2 !== undefined && row.contact2.length > 0" (click)="callPhone(row.contact2)" ><ion-icon class="store-icon ion-margin-end" color="danger" name="call-outline"></ion-icon>{{row.contact2}}</p>
+          <p *ngIf="row.emailAddress !== undefined &&  row.emailAddress.length > 0" (click)="sendEmail(row.emailAddress)" ><ion-icon class="store-icon ion-margin-end" color="danger" name="mail-outline"></ion-icon> {{row.emailAddress}}</p>
+          <p *ngIf="row.fax !== undefined &&  row.fax.length > 0" (click)="callPhone(row.fax)" ><strong>Fax:</strong> {{row.fax}}</p>
+          
         </ion-card-content>
       </ion-card>
     </ion-col>
