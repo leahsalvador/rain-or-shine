@@ -41,16 +41,32 @@ export class ProductCalculatorPage implements OnInit {
 
   ngOnInit() {
     this.productService.paintCalculatorProduct = 0;
+    const l1 = this.productService.selectedProduct.parentOption.length;
+    for (let x = 0; x < l1; x++) {
+      const l2 = this.productService.selectedProduct.parentOption[x].options.length;
+      for (let y = 0; y < l2; y++) {
+        const l3 = this.productService.selectedProduct.parentOption[x].options[y].options.length;
+        for (let z = 0; z < l3; z++) {
+          this.productService.selectedProduct.parentOption[x].options[y].options[z].quantity = 0;
+        }
+      }
+    }
   }
 
-  calculate(event: any){
-    if(event.target.value){
+  calculate(event: any) {
+    if (event.target.value) {
       const input = parseFloat(event.target.value);
-      if(input >= this.productService.selectedProduct.min && input <=this.productService.selectedProduct.max){
-        this.productService.paintCalculatorProduct = this.productService.selectedProduct.perLiter;
-      }else{
-        this.productService.paintCalculatorProduct = (input / this.productService.selectedProduct.min) * this.productService.selectedProduct.perLiter;
-        this.productService.paintCalculatorProduct = Math.floor(this.productService.paintCalculatorProduct);
+      const l1 = this.productService.selectedProduct.parentOption.length;
+      for (let x = 0; x < l1; x++) {
+        const l2 = this.productService.selectedProduct.parentOption[x].options.length;
+        for (let y = 0; y < l2; y++) {
+          const l3 = this.productService.selectedProduct.parentOption[x].options[y].options.length;
+          for (let z = 0; z < l3; z++) {
+            const divisor = this.productService.selectedProduct.parentOption[x].options[y].options[z].divisor;
+            const multiplier = this.productService.selectedProduct.parentOption[x].options[y].options[z].multiplier;
+            this.productService.selectedProduct.parentOption[x].options[y].options[z].quantity = ((input / divisor) * multiplier).toFixed(2).replace(/[.,]00$/, '');
+          }
+        }
       }
     }
   }

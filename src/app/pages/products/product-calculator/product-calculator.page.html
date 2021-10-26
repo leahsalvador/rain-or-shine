@@ -33,85 +33,42 @@
       </ion-col>
       <ion-col class="ion-no-padding" size="6" size-lg="4">
         <div class="ion-text-center">
-          <ion-input (ionInput)="calculate($event)" [(ngModel)]="m2" (ionChange)="convertToFt2()" (ionFocus)="focusInput($event)" (click)="$event.target.select()"  type="number" value="0" min="0" md="ios" class="ion-padding ion-text-center font-weight-900" color="primary" 
+          <ion-input (ionInput)="calculate($event)" [(ngModel)]="m2"  (ionFocus)="focusInput($event)" (click)="$event.target.select()"  type="number" value="0" min="0" md="ios" class="ion-padding ion-text-center font-weight-900" color="primary" 
           style="background: #fff; width: 50%; display:inline-block; border-radius: 15px; box-shadow: 2px 2px 1px #dbdbdb; font-size: 1rem;"></ion-input>
           <span class="text-primary font-weight-900" style="font-size: 1.5rem; margin-left: 0.5rem;">m<sup>2</sup></span>
         </div>
       </ion-col>
-      <ion-col class="ion-no-padding" size="6" size-lg="4">
-        <div class="ion-text-center">
-          <ion-input (ionInput)="calculate($event)" [(ngModel)]="ft2" (ionChange)="convertToM2()" (ionFocus)="focusInput($event)" (click)="$event.target.select()" type="number" value="0" min="0" md="ios" class="ion-padding ion-text-center font-weight-900" color="primary" 
-          style="background: #fff; width: 50%; display:inline-block; border-radius: 15px; box-shadow: 2px 2px 1px #dbdbdb; font-size: 1rem;"></ion-input>
-          <span class="text-primary font-weight-900" style="font-size: 1.5rem; margin-left: 0.5rem;">ft<sup>2</sup></span>
-        </div>
-      </ion-col>
     </ion-row>
     <ion-row class="ion-justify-content-center ion-text-center">
-      <ion-col size="12" size-lg="8">
-        <ion-card mode="ios" class="ion-padding-bottom">
-          <ion-row class="bg-primary ion-margin-bottom">
-            <ion-col class="ion-no-padding" size="6" size-lg="4">
-              <h6 class="text-light">USE</h6>
-            </ion-col>
-            <ion-col class="ion-no-padding" size="6" size-lg="4">
-              <h6 class="text-light">LITER</h6>
-            </ion-col>
-          </ion-row>
-          
-          <!--<ion-row>
-            <ion-col class="ion-no-padding" size="6" size-lg="4">
-              <h6 class="text-dark mt-0">Neutralizer</h6>
-            </ion-col>
-            <ion-col class="ion-no-padding" size="6" size-lg="4">
-              <h6 class="text-dark mt-0">{{this.productService.paintCalculatorProduct}}</h6>
-            </ion-col>
-          </ion-row>-->
-          <ion-row>
-            <ion-col class="ion-no-padding" size="6" size-lg="4">
-              <h6 class="text-dark mt-0">Skimcoat</h6>
-            </ion-col>
-            <ion-col class="ion-no-padding" size="6" size-lg="4">
-              <h6 class="text-dark mt-0">{{this.productService.paintCalculatorProduct}}</h6>
-            </ion-col>
-          </ion-row>
-
-          <ion-row>
-            <ion-col class="ion-no-padding" size="6" size-lg="4">
-              <h6 class="text-dark mt-0">Primer</h6>
-            </ion-col>
-            <ion-col class="ion-no-padding" size="6" size-lg="4">
-              <h6 class="text-dark mt-0">{{this.productService.paintCalculatorProduct}}</h6>
-            </ion-col>
-          </ion-row>
-
-          <!--<ion-row>
-            <ion-col class="ion-no-padding" size="6" size-lg="4">
-              <h6 class="text-dark mt-0">Full Putty</h6>
-            </ion-col>
-            <ion-col class="ion-no-padding" size="6" size-lg="4">
-              <h6 class="text-dark mt-0">{{this.productService.paintCalculatorProduct}}</h6>
-            </ion-col>
-          </ion-row>-->
-
-          <ion-row>
-            <ion-col class="ion-no-padding" size="6" size-lg="4">
-              <h6 class="text-dark mt-0">Spot Putty</h6>
-            </ion-col>
-            <ion-col class="ion-no-padding" size="6" size-lg="4">
-              <h6 class="text-dark mt-0">{{this.productService.paintCalculatorProduct}}</h6>
-            </ion-col>
-          </ion-row>
-
-          <ion-row>
-            <ion-col class="ion-no-padding" size="6" size-lg="4">
-              <h6 class="text-dark mt-0">Topcoat</h6>
-            </ion-col>
-            <ion-col class="ion-no-padding" size="6" size-lg="4">
-              <h6 class="text-dark mt-0">{{this.productService.paintCalculatorProduct}}</h6>
-            </ion-col>
-          </ion-row>
-
-        </ion-card>
+      <ion-col *ngFor="let pro of this.productService.selectedProduct.parentOption"  size="12" size-lg="8">
+        <h3 *ngIf="pro.title.length > 0" class="ion-text-left font-weight-900 mb-0">{{pro.title}}</h3>
+        <ion-col *ngFor="let prosub of pro.options" size="12" >
+          <h4 class="text-primary option-text"><i>{{prosub.title}}</i></h4>
+          <ion-card mode="ios" class="ion-padding-bottom ion-no-margin">
+            <ion-row class="bg-primary ion-margin-bottom">
+              <ion-col class="ion-no-padding mb-2" size="3" size-lg="4">
+                <h6 class="text-light pc-text">USE</h6>
+              </ion-col>
+              <ion-col class="ion-no-padding mb-2" size="6" size-lg="4">
+                <h6 class="text-light pc-text">PRODUCT</h6>
+              </ion-col>
+              <ion-col class="ion-no-padding mb-2" size="3" size-lg="4">
+                <h6 class="text-light pc-text-h2">LITER</h6>
+              </ion-col>
+            </ion-row>
+            <ion-row *ngFor="let prosubopt of prosub.options" >
+              <ion-col class="ion-no-padding mb-2" size="3" size-lg="4">
+                <h6 class="text-dark pc-text mt-0">{{prosubopt.use}}</h6>
+              </ion-col>
+              <ion-col class="ion-no-padding mb-2" size="6" size-lg="4">
+                <h6 class="text-dark pc-text mt-0">{{prosubopt.product}}</h6>
+              </ion-col>
+              <ion-col class="ion-no-padding mb-2" size="3" size-lg="4">
+                <h6 class="text-dark pc-text-2 mt-0"><strong>{{prosubopt.quantity}}</strong></h6>
+              </ion-col>
+            </ion-row>
+          </ion-card>
+        </ion-col>
       </ion-col>
     </ion-row>
   </ion-grid>

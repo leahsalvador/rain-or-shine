@@ -1,3 +1,6 @@
+import { ProductOptionSubModel } from './../interfaces/product/product-option-sub.interface';
+import { ProductOptionMainModel } from './../interfaces/product/product-option-main.interface';
+import { ProductOptionsModel } from './../interfaces/product/product-options.interface';
 import { SpecsModel } from './../interfaces/specs.interface';
 import { ProductColor } from './../interfaces/product/product-color.interface';
 import { Colors } from './../interfaces/colors.interface';
@@ -231,7 +234,55 @@ export class ProductService {
         hasPaintCalculator: true,
         min: 20,
         max: 25,
-        perLiter: 4
+        perLiter: 4,
+        parentOption: [
+          {
+            title: '',
+            options: [
+              {
+                title: 'Option 1',
+                options: [
+                  { use: 'Skimcoat', product: 'Arkhon Finishing Skimcoat ARK-301',
+                    quantity: 0, divisor: 12, multiplier: 4 } as ProductOptionMainModel,
+                  { use: 'Primer', product: 'Rain or Shine Elasto-Proofer',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel,
+                  { use: 'Putty (Spot)', product: 'Rain or Shine Power Putty',
+                    quantity: 0, divisor: 20, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '1st Topcoat', product: 'Rain or Shine Elastomeric Classic',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '2nd Topcoat', product: 'Rain or Shine Elastomeric Classic',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel
+                ]
+              } as ProductOptionSubModel,
+              {
+                title: 'Option 2',
+                options: [
+                  { use: 'Skimcoat', product: 'Arkhon Finishing Skimcoat ARK-301',
+                    quantity: 0, divisor: 12, multiplier: 4 } as ProductOptionMainModel,
+                  { use: 'Primer', product: 'Rain or Shine Prepa- White',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel,
+                  { use: 'Putty (Spot)', product: 'Rain or Shine Power Putty',
+                    quantity: 0, divisor: 20, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '1st Topcoat', product: 'Rain or Shine Elastomeric Classic',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '2nd Topcoat', product: 'Rain or Shine Elastomeric Classic',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel
+                ]
+              } as ProductOptionSubModel,
+              {
+                title: 'Option 3 (same system with Elasto-Tex)',
+                options: [
+                  { use: 'Primer', product: 'Rain or Shine Elasto-Tex',
+                    quantity: 0, divisor: 8, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '1st Topcoat', product: 'Rain or Shine Elastomeric Classic',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '2nd Topcoat', product: 'Rain or Shine Elastomeric Classic',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel
+                ]
+              } as ProductOptionSubModel,
+            ]
+          } as ProductOptionsModel
+        ]
       },
       {
         title: 'Dirt Shield',
@@ -294,7 +345,59 @@ export class ProductService {
         hasPaintCalculator: true,
         min: 20,
         max: 25,
-        perLiter: 4
+        perLiter: 4,
+        parentOption: [
+          {
+            title: '',
+            options: [
+              {
+                title: 'Option 1',
+                options: [
+                  { use: 'Skimcoat', product: 'Arkhon Finishing Skimcoat ARK-301',
+                    quantity: 0, divisor: 12, multiplier: 4 } as ProductOptionMainModel,
+                  { use: 'Primer', product: 'Rain or Shine Elasto-Proofer',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel,
+                  { use: 'Putty (Spot)', product: 'Rain or Shine Power Putty',
+                    quantity: 0, divisor: 20, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '1st Topcoat', product: 'Rain or Shine Elastomeric Dirt Shield',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '2nd Topcoat', product: 'Rain or Shine Elastomeric Dirt Shield',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel
+                ]
+              } as ProductOptionSubModel,
+              {
+                title: 'Option 2',
+                options: [
+                  { use: 'Skimcoat', product: 'Arkhon Finishing Skimcoat ARK-301',
+                    quantity: 0, divisor: 12, multiplier: 4 } as ProductOptionMainModel,
+                  { use: 'Primer', product: 'Rain or Shine Wall Mastic',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel,
+                  { use: 'Putty (Spot)', product: 'Rain or Shine Power Putty',
+                    quantity: 0, divisor: 20, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '1st Topcoat', product: 'Rain or Shine Elastomeric Dirt Shield',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '2nd Topcoat', product: 'Rain or Shine Elastomeric Dirt Shield',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel
+                ]
+              } as ProductOptionSubModel,
+              {
+                title: 'Option 3',
+                options: [
+                  { use: 'Skimcoat', product: 'Arkhon Finishing Skimcoat ARK-301',
+                    quantity: 0, divisor: 12, multiplier: 4 } as ProductOptionMainModel,
+                  { use: 'Primer', product: 'Rain or Shine Prepa-White ',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel,
+                  { use: 'Putty (Spot)', product: 'Rain or Shine Power Putty',
+                    quantity: 0, divisor: 20, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '1st Topcoat', product: 'Rain or Shine Elastomeric Dirt Shield',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '2nd Topcoat', product: 'Rain or Shine Elastomeric Dirt Shield',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel
+                ]
+              } as ProductOptionSubModel
+            ]
+          } as ProductOptionsModel
+        ]
       },
       {
         title: 'ElastoFloor',
@@ -359,7 +462,27 @@ export class ProductService {
         hasPaintCalculator: true,
         min: 20,
         max: 25,
-        perLiter: 4
+        perLiter: 4,
+        parentOption: [
+          {
+            title: '',
+            options: [
+              {
+                title: 'Option 1',
+                options: [
+                  { use: 'Primer', product: 'Rain or Shine Elasto Floor  - Low Sheen',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel,
+                  { use: 'Putty (Spot)', product: 'Rain or Shine Power Putty',
+                    quantity: 0, divisor: 20, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '1st Topcoat', product: 'Rain or Shine Elasto Floor  - Low Sheen',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '2nd Topcoat', product: 'Rain or Shine Elasto Floor  - Low Sheen',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel
+                ]
+              } as ProductOptionSubModel
+            ]
+          } as ProductOptionsModel
+        ]
       },
       {
         title: 'Elastomeric Paint',
@@ -420,7 +543,59 @@ export class ProductService {
         min: 20,
         max: 25,
         perLiter: 4,
-        type: 'wall'
+        type: 'wall',
+        parentOption: [
+          {
+            title: '',
+            options: [
+              {
+                title: 'Option 1',
+                options: [
+                  { use: 'Skimcoat', product: 'Arkhon Finishing Skimcoat ARK-301',
+                    quantity: 0, divisor: 12, multiplier: 4 } as ProductOptionMainModel,
+                  { use: 'Primer', product: 'Rain or Shine Elastomeric Low Sheen',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel,
+                  { use: 'Putty (Spot)', product: 'Rain or Shine Power Putty',
+                    quantity: 0, divisor: 20, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '1st Topcoat', product: 'Rain or Shine Elastomeric Low Sheen',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '2nd Topcoat', product: 'Rain or Shine Elastomeric Low Sheen',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel
+                ]
+              } as ProductOptionSubModel,
+              {
+                title: 'Option 2',
+                options: [
+                  { use: 'Skimcoat', product: 'Arkhon Finishing Skimcoat ARK-301',
+                    quantity: 0, divisor: 12, multiplier: 4 } as ProductOptionMainModel,
+                  { use: 'Primer', product: 'Rain or Shine Elasto-Proofer',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel,
+                  { use: 'Putty (Spot)', product: 'Rain or Shine Power Putty',
+                    quantity: 0, divisor: 20, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '1st Topcoat', product: 'Rain or Shine Elastomeric Low Sheen',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '2nd Topcoat', product: 'Rain or Shine Elastomeric Low Sheen',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel
+                ]
+              } as ProductOptionSubModel,
+              {
+                title: 'Option 3',
+                options: [
+                  { use: 'Skimcoat', product: 'Arkhon Finishing Skimcoat ARK-301',
+                    quantity: 0, divisor: 12, multiplier: 4 } as ProductOptionMainModel,
+                  { use: 'Primer', product: 'Rain or Shine Prepa- White',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel,
+                  { use: 'Putty (Spot)', product: 'Rain or Shine Power Putty',
+                    quantity: 0, divisor: 20, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '1st Topcoat', product: 'Rain or Shine Elastomeric Low Sheen',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '2nd Topcoat', product: 'Rain or Shine Elastomeric Low Sheen',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel
+                ]
+              } as ProductOptionSubModel
+            ]
+          } as ProductOptionsModel
+        ]
       },
       {
         title: 'Elasto-Proofer',
@@ -474,7 +649,74 @@ export class ProductService {
         hasPaintCalculator: true,
         min: 20,
         max: 25,
-        perLiter: 4
+        perLiter: 4,
+        parentOption: [
+          {
+            title: '',
+            options: [
+              {
+                title: 'Option 1',
+                options: [
+                  { use: 'Skimcoat', product: 'Arkhon Finishing Skimcoat ARK-301',
+                    quantity: 0, divisor: 12, multiplier: 4 } as ProductOptionMainModel,
+                  { use: 'Primer', product: 'Rain or Shine Elasto-Proofer',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel,
+                  { use: 'Putty (Spot)', product: 'Rain or Shine Power Putty',
+                    quantity: 0, divisor: 20, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '1st Topcoat', product: 'Rain or Shine Elastomeric Low Sheen',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '2nd Topcoat', product: 'Rain or Shine Elastomeric Low Sheen',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel
+                ]
+              } as ProductOptionSubModel,
+              {
+                title: 'Option 2',
+                options: [
+                  { use: 'Skimcoat', product: 'Arkhon Finishing Skimcoat ARK-301',
+                    quantity: 0, divisor: 12, multiplier: 4 } as ProductOptionMainModel,
+                  { use: 'Primer', product: 'Rain or Shine Elasto-Proofer',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel,
+                  { use: 'Putty (Spot)', product: 'Rain or Shine Power Putty',
+                    quantity: 0, divisor: 20, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '1st Topcoat', product: 'Rain or Shine Classic -Semi-Gloss',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '2nd Topcoat', product: 'Rain or Shine Classic -Semi-Gloss',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel
+                ]
+              } as ProductOptionSubModel,
+              {
+                title: 'Option 3',
+                options: [
+                  { use: 'Skimcoat', product: 'Arkhon Finishing Skimcoat ARK-301',
+                    quantity: 0, divisor: 12, multiplier: 4 } as ProductOptionMainModel,
+                  { use: 'Primer', product: 'Rain or Shine Elasto-Proofer',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel,
+                  { use: 'Putty (Spot)', product: 'Rain or Shine Power Putty',
+                    quantity: 0, divisor: 20, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '1st Topcoat', product: 'Rain or Shine Dirt Shield -Semi-Gloss',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '2nd Topcoat', product: 'Rain or Shine Dirt Shield -Semi-Gloss',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel
+                ]
+              } as ProductOptionSubModel,
+              {
+                title: 'Option 4',
+                options: [
+                  { use: 'Skimcoat', product: 'Arkhon Finishing Skimcoat ARK-301',
+                    quantity: 0, divisor: 12, multiplier: 4 } as ProductOptionMainModel,
+                  { use: 'Primer', product: 'Rain or Shine Elasto-Proofer',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel,
+                  { use: 'Putty (Spot)', product: 'Rain or Shine Power Putty',
+                    quantity: 0, divisor: 20, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '1st Topcoat', product: 'Rain or Shine Hi Gloss -Diamond Shine',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '2nd Topcoat', product: 'Rain or Shine Hi Gloss -Diamond Shine',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel
+                ]
+              } as ProductOptionSubModel
+            ]
+          } as ProductOptionsModel
+        ]
       },
       {
         title: 'Elasto-Tex',
@@ -521,7 +763,58 @@ export class ProductService {
         hasPaintCalculator: true,
         min: 6,
         max: 8,
-        perLiter: 4
+        perLiter: 4,
+        parentOption: [
+          {
+            title: '',
+            options: [
+              {
+                title: 'Option 1',
+                options: [
+                  { use: 'Primer', product: 'Rain or Shine Elast-Tex',
+                    quantity: 0, divisor: 8, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '1st Topcoat', product: 'Rain or Shine Elastomeric Low Sheen',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '2nd Topcoat', product: 'Rain or Shine Elastomeric Low Sheen',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel
+                ]
+              } as ProductOptionSubModel,
+              {
+                title: 'Option 2',
+                options: [
+                  { use: 'Primer', product: 'Rain or Shine Elast-Tex',
+                    quantity: 0, divisor: 8, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '1st Topcoat', product: 'Rain or Shine Classic -Semi-Gloss',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '2nd Topcoat', product: 'Rain or Shine Classic -Semi-Gloss',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel
+                ]
+              } as ProductOptionSubModel,
+              {
+                title: 'Option 3',
+                options: [
+                  { use: 'Primer', product: 'Rain or Shine Elast-Tex',
+                    quantity: 0, divisor: 8, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '1st Topcoat', product: 'Rain or Shine Dirt Shield -Semi-Gloss',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '2nd Topcoat', product: 'Rain or Shine Dirt Shield -Semi-Gloss',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel
+                ]
+              } as ProductOptionSubModel,
+              {
+                title: 'Option 4',
+                options: [
+                  { use: 'Primer', product: 'Rain or Shine Elast-Tex',
+                    quantity: 0, divisor: 8, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '1st Topcoat', product: 'Rain or Shine Hi Gloss -Diamond Shine',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '2nd Topcoat', product: 'Rain or Shine Hi Gloss -Diamond Shine',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel
+                ]
+              } as ProductOptionSubModel,
+            ]
+          } as ProductOptionsModel
+        ]
       },
       {
         title: 'Elasto-Tint',
@@ -618,7 +911,59 @@ export class ProductService {
         max: 25,
         perLiter: 4,
         type: 'wall',
-        type2: 'interior' 
+        type2: 'interior',
+        parentOption: [
+          {
+            title: '',
+            options: [
+              {
+                title: 'Option 1',
+                options: [
+                  { use: 'Skimcoat', product: 'Arkhon Finishing Skimcoat ARK-301 (2 Coats)',
+                    quantity: 0, divisor: 12, multiplier: 4 } as ProductOptionMainModel,
+                  { use: 'Primer', product: 'Rain or Shine Fresco Satin Finish',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel,
+                  { use: 'Putty (Spot)', product: 'Rain or Shine Power Putty',
+                    quantity: 0, divisor: 20, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '1st Topcoat', product: 'Rain or Shine Fresco Satin Finish',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '2nd Topcoat', product: 'Rain or Shine Fresco Satin Finish',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel
+                ]
+              } as ProductOptionSubModel,
+              {
+                title: 'Option 2',
+                options: [
+                  { use: 'Skimcoat', product: 'Arkhon Finishing Skimcoat ARK-301',
+                    quantity: 0, divisor: 12, multiplier: 4 } as ProductOptionMainModel,
+                  { use: 'Primer', product: 'Rain or Shine Elasto-Proofer',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel,
+                  { use: 'Putty (Spot)', product: 'Rain or Shine Power Putty',
+                    quantity: 0, divisor: 20, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '1st Topcoat', product: 'Rain or Shine Fresco Satin Finish',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '2nd Topcoat', product: 'Rain or Shine Fresco Satin Finish',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel
+                ]
+              } as ProductOptionSubModel,
+              {
+                title: 'Option 3',
+                options: [
+                  { use: 'Skimcoat', product: 'Arkhon Finishing Skimcoat ARK-301',
+                    quantity: 0, divisor: 12, multiplier: 4 } as ProductOptionMainModel,
+                  { use: 'Primer', product: 'Rain or Shine Prepa-White',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel,
+                  { use: 'Putty (Spot)', product: 'Rain or Shine Power Putty',
+                    quantity: 0, divisor: 20, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '1st Topcoat', product: 'Rain or Shine Fresco Satin Finish ',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '2nd Topcoat', product: 'Rain or Shine Fresco Satin Finish ',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel
+                ]
+              } as ProductOptionSubModel
+            ]
+          } as ProductOptionsModel
+        ]
       },
       {
         title: 'Fresco Shine Plus',
@@ -708,7 +1053,70 @@ export class ProductService {
         hasPaintCalculator: true,
         min: 20,
         max: 25,
-        perLiter: 4
+        perLiter: 4,
+        parentOption: [
+          {
+            title: '',
+            options: [
+              {
+                title: 'Option 1',
+                options: [
+                  { use: 'Skimcoat', product: 'Arkhon Finishing Skimcoat ARK-301',
+                    quantity: 0, divisor: 12, multiplier: 4 } as ProductOptionMainModel,
+                  { use: 'Primer', product: 'Rain or Shine Elasto-Proofer',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel,
+                  { use: 'Putty (Spot)', product: 'Rain or Shine Power Putty',
+                    quantity: 0, divisor: 20, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '1st Topcoat', product: 'Rain or Shine Elastomeric Hi-Gloss',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '2nd Topcoat', product: 'Rain or Shine Elastomeric Hi-Gloss',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel
+                ]
+              } as ProductOptionSubModel,
+              {
+                title: 'Option 2',
+                options: [
+                  { use: 'Skimcoat', product: 'Arkhon Finishing Skimcoat ARK-301',
+                    quantity: 0, divisor: 12, multiplier: 4 } as ProductOptionMainModel,
+                  { use: 'Primer', product: 'Rain or Shine Wall Mastic',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel,
+                  { use: 'Putty (Spot)', product: 'Rain or Shine Power Putty',
+                    quantity: 0, divisor: 20, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '1st Topcoat', product: 'Rain or Shine Elastomeric Hi-Gloss',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '2nd Topcoat', product: 'Rain or Shine Elastomeric Hi-Gloss',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel
+                ]
+              } as ProductOptionSubModel,
+              {
+                title: 'Option 3',
+                options: [
+                  { use: 'Skimcoat', product: 'Arkhon Finishing Skimcoat ARK-301',
+                    quantity: 0, divisor: 12, multiplier: 4 } as ProductOptionMainModel,
+                  { use: 'Primer', product: 'Rain or Shine Prepa-White ',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel,
+                  { use: 'Putty (Spot)', product: 'Rain or Shine Power Putty',
+                    quantity: 0, divisor: 20, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '1st Topcoat', product: 'Rain or Shine Elastomeric Hi-Gloss',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '2nd Topcoat', product: 'Rain or Shine Elastomeric Hi-Gloss',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel
+                ]
+              } as ProductOptionSubModel,
+              {
+                title: 'Option 3 (same system with Elasto-Tex)',
+                options: [
+                  { use: 'Primer', product: 'Rain or Shine Elasto-Tex',
+                    quantity: 0, divisor: 8, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '1st Topcoat', product: 'Rain or Shine Elastomeric Hi-Gloss',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '2nd Topcoat', product: 'Rain or Shine Elastomeric Hi-Gloss',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel
+                ]
+              } as ProductOptionSubModel,
+            ]
+          } as ProductOptionsModel
+        ]
       },
       {
         title: 'Mastic Putty',
@@ -769,7 +1177,74 @@ export class ProductService {
         hasPaintCalculator: true,
         min: 15,
         max: 20,
-        perLiter: 4
+        perLiter: 4,
+        parentOption: [
+          {
+            title: '',
+            options: [
+              {
+                title: 'Option 1',
+                options: [
+                  { use: 'Skimcoat', product: 'Arkhon Finishing Skimcoat ARK-301',
+                    quantity: 0, divisor: 12, multiplier: 4 } as ProductOptionMainModel,
+                  { use: 'Primer', product: 'Rain or Shine Elasto-Proofer',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel,
+                  { use: 'Putty (Spot)', product: 'Rain or Shine Mastic Putty',
+                    quantity: 0, divisor: 20, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '1st Topcoat', product: 'Rain or Shine Elastomeric Low Sheen',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '2nd Topcoat', product: 'Rain or Shine Elastomeric Low Sheen',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel
+                ]
+              } as ProductOptionSubModel,
+              {
+                title: 'Option 2',
+                options: [
+                  { use: 'Skimcoat', product: 'Arkhon Finishing Skimcoat ARK-301',
+                    quantity: 0, divisor: 12, multiplier: 4 } as ProductOptionMainModel,
+                  { use: 'Primer', product: 'Rain or Shine Elasto-Proofer',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel,
+                  { use: 'Putty (Spot)', product: 'Rain or Shine Mastic Putty',
+                    quantity: 0, divisor: 20, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '1st Topcoat', product: 'Rain or Shine Classic -Semi-Gloss',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '2nd Topcoat', product: 'Rain or Shine Classic -Semi-Gloss',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel
+                ]
+              } as ProductOptionSubModel,
+              {
+                title: 'Option 3',
+                options: [
+                  { use: 'Skimcoat', product: 'Arkhon Finishing Skimcoat ARK-301',
+                    quantity: 0, divisor: 12, multiplier: 4 } as ProductOptionMainModel,
+                  { use: 'Primer', product: 'Rain or Shine Elasto-Proofer',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel,
+                  { use: 'Putty (Spot)', product: 'Rain or Shine Mastic Putty',
+                    quantity: 0, divisor: 20, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '1st Topcoat', product: 'Rain or Shine Dirt Shield -Semi-Gloss',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '2nd Topcoat', product: 'Rain or Shine Dirt Shield -Semi-Gloss',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel
+                ]
+              } as ProductOptionSubModel,
+              {
+                title: 'Option 4',
+                options: [
+                  { use: 'Skimcoat', product: 'Arkhon Finishing Skimcoat ARK-301',
+                    quantity: 0, divisor: 12, multiplier: 4 } as ProductOptionMainModel,
+                  { use: 'Primer', product: 'Rain or Shine Elasto-Proofer',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel,
+                  { use: 'Putty (Spot)', product: 'Rain or Shine Mastic Putty',
+                    quantity: 0, divisor: 20, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '1st Topcoat', product: 'Rain or Shine Hi Gloss -Diamond Shine',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '2nd Topcoat', product: 'Rain or Shine Hi Gloss -Diamond Shine',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel
+                ]
+              } as ProductOptionSubModel
+            ]
+          } as ProductOptionsModel
+        ]
       },
       {
         title: 'Prepa-White',
@@ -822,7 +1297,74 @@ export class ProductService {
         hasPaintCalculator: true,
         min: 20,
         max: 25,
-        perLiter: 4
+        perLiter: 4,
+        parentOption: [
+          {
+            title: '',
+            options: [
+              {
+                title: 'Option 1',
+                options: [
+                  { use: 'Skimcoat', product: 'Arkhon Finishing Skimcoat ARK-301',
+                    quantity: 0, divisor: 12, multiplier: 4 } as ProductOptionMainModel,
+                  { use: 'Primer', product: 'Rain or Shine Prepa-White',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel,
+                  { use: 'Putty (Spot)', product: 'Rain or Shine Power Putty',
+                    quantity: 0, divisor: 20, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '1st Topcoat', product: 'Rain or Shine Elastomeric Low Sheen',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '2nd Topcoat', product: 'Rain or Shine Elastomeric Low Sheen',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel
+                ]
+              } as ProductOptionSubModel,
+              {
+                title: 'Option 2',
+                options: [
+                  { use: 'Skimcoat', product: 'Arkhon Finishing Skimcoat ARK-301',
+                    quantity: 0, divisor: 12, multiplier: 4 } as ProductOptionMainModel,
+                  { use: 'Primer', product: 'Rain or Shine Prepa-White',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel,
+                  { use: 'Putty (Spot)', product: 'Rain or Shine Power Putty',
+                    quantity: 0, divisor: 20, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '1st Topcoat', product: 'Rain or Shine Classic -Semi-Gloss',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '2nd Topcoat', product: 'Rain or Shine Classic -Semi-Gloss',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel
+                ]
+              } as ProductOptionSubModel,
+              {
+                title: 'Option 3',
+                options: [
+                  { use: 'Skimcoat', product: 'Arkhon Finishing Skimcoat ARK-301',
+                    quantity: 0, divisor: 12, multiplier: 4 } as ProductOptionMainModel,
+                  { use: 'Primer', product: 'Rain or Shine Prepa-White',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel,
+                  { use: 'Putty (Spot)', product: 'Rain or Shine Power Putty',
+                    quantity: 0, divisor: 20, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '1st Topcoat', product: 'Rain or Shine Dirt Shield -Semi-Gloss',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '2nd Topcoat', product: 'Rain or Shine Dirt Shield -Semi-Gloss',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel
+                ]
+              } as ProductOptionSubModel,
+              {
+                title: 'Option 4',
+                options: [
+                  { use: 'Skimcoat', product: 'Arkhon Finishing Skimcoat ARK-301',
+                    quantity: 0, divisor: 12, multiplier: 4 } as ProductOptionMainModel,
+                  { use: 'Primer', product: 'Rain or Shine Prepa-White',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel,
+                  { use: 'Putty (Spot)', product: 'Rain or Shine Power Putty',
+                    quantity: 0, divisor: 20, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '1st Topcoat', product: 'Rain or Shine Hi Gloss -Diamond Shine',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '2nd Topcoat', product: 'Rain or Shine Hi Gloss -Diamond Shine',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel
+                ]
+              } as ProductOptionSubModel
+            ]
+          } as ProductOptionsModel
+        ]
       },
       {
         title: 'Power Putty',
@@ -883,7 +1425,74 @@ export class ProductService {
         hasPaintCalculator: true,
         min: 5,
         max: 20,
-        perLiter: 4
+        perLiter: 4,
+        parentOption: [
+          {
+            title: '',
+            options: [
+              {
+                title: 'Option 1',
+                options: [
+                  { use: 'Skimcoat', product: 'Arkhon Finishing Skimcoat ARK-301',
+                    quantity: 0, divisor: 12, multiplier: 4 } as ProductOptionMainModel,
+                  { use: 'Primer', product: 'Rain or Shine Elasto-Proofer',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel,
+                  { use: 'Putty (Spot)', product: 'Rain or Shine Power Putty',
+                    quantity: 0, divisor: 20, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '1st Topcoat', product: 'Rain or Shine Elastomeric Low Sheen',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '2nd Topcoat', product: 'Rain or Shine Elastomeric Low Sheen',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel
+                ]
+              } as ProductOptionSubModel,
+              {
+                title: 'Option 2',
+                options: [
+                  { use: 'Skimcoat', product: 'Arkhon Finishing Skimcoat ARK-301',
+                    quantity: 0, divisor: 12, multiplier: 4 } as ProductOptionMainModel,
+                  { use: 'Primer', product: 'Rain or Shine Elasto-Proofer',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel,
+                  { use: 'Putty (Spot)', product: 'Rain or Shine Power Putty',
+                    quantity: 0, divisor: 20, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '1st Topcoat', product: 'Rain or Shine Classic -Semi-Gloss',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '2nd Topcoat', product: 'Rain or Shine Classic -Semi-Gloss',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel
+                ]
+              } as ProductOptionSubModel,
+              {
+                title: 'Option 3',
+                options: [
+                  { use: 'Skimcoat', product: 'Arkhon Finishing Skimcoat ARK-301',
+                    quantity: 0, divisor: 12, multiplier: 4 } as ProductOptionMainModel,
+                  { use: 'Primer', product: 'Rain or Shine Elasto-Proofer',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel,
+                  { use: 'Putty (Spot)', product: 'Rain or Shine Power Putty',
+                    quantity: 0, divisor: 20, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '1st Topcoat', product: 'Rain or Shine Dirt Shield -Semi-Gloss',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '2nd Topcoat', product: 'Rain or Shine Dirt Shield -Semi-Gloss',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel
+                ]
+              } as ProductOptionSubModel,
+              {
+                title: 'Option 4',
+                options: [
+                  { use: 'Skimcoat', product: 'Arkhon Finishing Skimcoat ARK-301',
+                    quantity: 0, divisor: 12, multiplier: 4 } as ProductOptionMainModel,
+                  { use: 'Primer', product: 'Rain or Shine Elasto-Proofer',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel,
+                  { use: 'Putty (Spot)', product: 'Rain or Shine Power Putty',
+                    quantity: 0, divisor: 20, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '1st Topcoat', product: 'Rain or Shine Hi Gloss -Diamond Shine',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '2nd Topcoat', product: 'Rain or Shine Hi Gloss -Diamond Shine',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel
+                ]
+              } as ProductOptionSubModel
+            ]
+          } as ProductOptionsModel
+        ]
       },
       {
         title: 'Sun Roof',
@@ -938,7 +1547,47 @@ export class ProductService {
         hasPaintCalculator: true,
         min: 25,
         max: 30,
-        perLiter: 4
+        perLiter: 4,
+        parentOption: [
+          {
+            title: '',
+            options: [
+              {
+                title: 'Option 1 Metal',
+                options: [
+                  { use: 'Primer', product: 'Premium Welcoat Zinc Chromate Yellow PWPRE-6500',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '1st Topcoat', product: 'Rain or Shine Sun Roof - Gloss',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '2nd Topcoat', product: 'Rain or Shine Sun Roof - Gloss',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel
+                ]
+              } as ProductOptionSubModel,
+              {
+                title: 'Option 2 Unglazed Roof Tiles',
+                options: [
+                  { use: 'Primer', product: 'Rain or Shine Elasto-Proofer',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '1st Topcoat', product: 'Rain or Shine Sun Roof - Gloss',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '2nd Topcoat', product: 'Rain or Shine Sun Roof - Gloss',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel
+                ]
+              } as ProductOptionSubModel,
+              {
+                title: 'Option 3 Unglazed Roof Tiles',
+                options: [
+                  { use: 'Primer', product: 'Rain or Shine Roof Mastic - Low Sheen',
+                    quantity: 0, divisor: 20, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '1st Topcoat', product: 'Rain or Shine Sun Roof - Gloss',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '2nd Topcoat', product: 'Rain or Shine Sun Roof - Gloss',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel
+                ]
+              } as ProductOptionSubModel
+            ]
+          } as ProductOptionsModel
+        ]
       },
       {
         title: 'Top White',
@@ -996,7 +1645,79 @@ export class ProductService {
         hasPaintCalculator: true,
         min: 20,
         max: 25,
-        perLiter: 4
+        perLiter: 4,
+        parentOption: [
+          {
+            title: 'Top Semi-Gloss',
+            options: [
+              {
+                title: 'Option 1',
+                options: [
+                  { use: 'Skimcoat', product: 'Arkhon Finishing Skimcoat ARK-301',
+                    quantity: 0, divisor: 12, multiplier: 4 } as ProductOptionMainModel,
+                  { use: 'Primer', product: 'Rain or Shine Prepa-White',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel,
+                  { use: 'Putty (Spot)', product: 'Rain or Shine Power Putty',
+                    quantity: 0, divisor: 20, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '1st Topcoat', product: 'Rain or Shine Top Semi-Gloss 915',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '2nd Topcoat', product: 'Rain or Shine Top Semi-Gloss 915',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel
+                ]
+              } as ProductOptionSubModel,
+              {
+                title: 'Option 2',
+                options: [
+                  { use: 'Skimcoat', product: 'Arkhon Finishing Skimcoat ARK-301',
+                    quantity: 0, divisor: 12, multiplier: 4 } as ProductOptionMainModel,
+                  { use: 'Primer', product: 'Rain or Shine Elasto-Proofer',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel,
+                  { use: 'Putty (Spot)', product: 'Rain or Shine Power Putty',
+                    quantity: 0, divisor: 20, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '1st Topcoat', product: 'Rain or Shine Top Semi-Gloss 915',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '2nd Topcoat', product: 'Rain or Shine Top Semi-Gloss 915',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel
+                ]
+              } as ProductOptionSubModel
+            ]
+          } as ProductOptionsModel,
+          {
+            title: 'Top White',
+            options: [
+              {
+                title: 'Option 1',
+                options: [
+                  { use: 'Skimcoat', product: 'Arkhon Finishing Skimcoat ARK-301',
+                    quantity: 0, divisor: 12, multiplier: 4 } as ProductOptionMainModel,
+                  { use: 'Primer', product: 'Rain or Shine Prepa-White',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel,
+                  { use: 'Putty (Spot)', product: 'Rain or Shine Power Putty',
+                    quantity: 0, divisor: 20, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '1st Topcoat', product: 'Rain or Shine Top White  901',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '2nd Topcoat', product: 'Rain or Shine Top White  901',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel
+                ]
+              } as ProductOptionSubModel,
+              {
+                title: 'Option 2',
+                options: [
+                  { use: 'Skimcoat', product: 'Arkhon Finishing Skimcoat ARK-301',
+                    quantity: 0, divisor: 12, multiplier: 4 } as ProductOptionMainModel,
+                  { use: 'Primer', product: 'Rain or Shine Elasto-Proofer',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel,
+                  { use: 'Putty (Spot)', product: 'Rain or Shine Power Putty',
+                    quantity: 0, divisor: 20, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '1st Topcoat', product: 'Rain or Shine Top White  901',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '2nd Topcoat', product: 'Rain or Shine Top White  901',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel
+                ]
+              } as ProductOptionSubModel
+            ]
+          } as ProductOptionsModel
+        ]
       },
       {
         title: 'Xtra Gloss',
@@ -1385,7 +2106,27 @@ export class ProductService {
         hasPaintCalculator: true,
         min: 15,
         max: 20,
-        perLiter: 4
+        perLiter: 4,
+        parentOption: [
+          {
+            title: '',
+            options: [
+              {
+                title: 'Option 1',
+                options: [
+                  { use: 'Primer', product: 'Rain or Shine Deck Seal  - Low Sheen',
+                    quantity: 0, divisor: 20, multiplier: 4 } as ProductOptionMainModel,
+                  { use: 'Putty (Spot)', product: 'Rain or Shine Power Putty',
+                    quantity: 0, divisor: 20, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '1st Topcoat', product: 'Rain or Shine Deck Seal  - Low Sheen',
+                    quantity: 0, divisor: 20, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '2nd Topcoat', product: 'Rain or Shine Deck Seal  - Low Sheen',
+                    quantity: 0, divisor: 20, multiplier: 4 } as ProductOptionMainModel
+                ]
+              } as ProductOptionSubModel
+            ]
+          } as ProductOptionsModel
+        ]
       },
       {
         title: 'Hydro Lock',
@@ -1432,7 +2173,25 @@ export class ProductService {
         hasPaintCalculator: true,
         min: 15,
         max: 20,
-        perLiter: 4
+        perLiter: 4,
+        parentOption: [
+          {
+            title: '',
+            options: [
+              {
+                title: 'Option 1',
+                options: [
+                  { use: 'Primer', product: 'Rain or Shine Hydro Lock - Low Sheen',
+                    quantity: 0, divisor: 20, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '1st Topcoat', product: 'Rain or Shine Hydro Lock - Low Sheen',
+                    quantity: 0, divisor: 20, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '2nd Topcoat', product: 'Rain or Shine Hydro Lock - Low Sheen',
+                    quantity: 0, divisor: 20, multiplier: 4 } as ProductOptionMainModel
+                ]
+              } as ProductOptionSubModel
+            ]
+          } as ProductOptionsModel
+        ]
       },
       {
         title: 'Roof Mastic',
@@ -1495,7 +2254,47 @@ export class ProductService {
         hasPaintCalculator: true,
         min: 15,
         max: 20,
-        perLiter: 4
+        perLiter: 4,
+        parentOption: [
+          {
+            title: '',
+            options: [
+              {
+                title: 'Option 1',
+                options: [
+                  { use: 'Primer', product: 'Premium Welcoat Zinc Chromate Yellow PWPRE-6500',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '1st Topcoat', product: 'Rain or Shine Wall Mastic - Low Sheen',
+                    quantity: 0, divisor: 20, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '2nd Topcoat', product: 'Rain or Shine Wall Mastic - Low Sheen',
+                    quantity: 0, divisor: 20, multiplier: 4 } as ProductOptionMainModel
+                ]
+              } as ProductOptionSubModel,
+              {
+                title: 'Option 2',
+                options: [
+                  { use: 'Primer', product: 'Rain or Shine Wall Mastic - Low Sheen',
+                    quantity: 0, divisor: 20, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '1st Topcoat', product: 'Rain or Shine Wall Mastic - Low Sheen',
+                    quantity: 0, divisor: 20, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '2nd Topcoat (Optional)', product: 'Rain or Shine Wall Mastic - Low Sheen',
+                    quantity: 0, divisor: 20, multiplier: 4 } as ProductOptionMainModel
+                ]
+              } as ProductOptionSubModel,
+              {
+                title: 'Option 3',
+                options: [
+                  { use: 'Primer', product: 'Rain or Shine Wall Mastic - Low Sheen',
+                    quantity: 0, divisor: 20, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '1st Topcoat', product: 'Rain or Shine Sun Roof - Gloss',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '2nd Topcoat', product: 'Rain or Shine Sun Roof - Gloss',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel
+                ]
+              } as ProductOptionSubModel
+            ]
+          } as ProductOptionsModel
+        ]
       },
       {
         title: 'Wall Mastic',
@@ -1554,7 +2353,44 @@ export class ProductService {
         hasPaintCalculator: true,
         min: 15,
         max: 20,
-        perLiter: 4
+        perLiter: 4,
+        parentOption: [
+          {
+            title: '',
+            options: [
+              {
+                title: 'Option 1',
+                options: [
+                  { use: 'Skimcoat', product: 'Arkhon Finishing Skimcoat ARK-301 (2 Coats)',
+                    quantity: 0, divisor: 12, multiplier: 4 } as ProductOptionMainModel,
+                  { use: 'Primer', product: 'Rain or Shine Wall Mastic - Low Sheen',
+                    quantity: 0, divisor: 20, multiplier: 4 } as ProductOptionMainModel,
+                  { use: 'Putty (Spot)', product: 'Rain or Shine Power Putty',
+                    quantity: 0, divisor: 20, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '1st Topcoat', product: 'Rain or Shine Wall Mastic - Low Sheen',
+                    quantity: 0, divisor: 20, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '2nd Topcoat', product: 'Rain or Shine Wall Mastic - Low Sheen',
+                    quantity: 0, divisor: 20, multiplier: 4 } as ProductOptionMainModel
+                ]
+              } as ProductOptionSubModel,
+              {
+                title: 'Option 2',
+                options: [
+                  { use: 'Skimcoat', product: 'Arkhon Finishing Skimcoat ARK-301',
+                    quantity: 0, divisor: 12, multiplier: 4 } as ProductOptionMainModel,
+                  { use: 'Primer', product: 'Rain or Shine Wall Mastic - Low Sheen',
+                    quantity: 0, divisor: 20, multiplier: 4 } as ProductOptionMainModel,
+                  { use: 'Putty (Spot)', product: 'Rain or Shine Power Putty',
+                    quantity: 0, divisor: 20, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '1st Topcoat', product: 'Rain or Shine Elastomeric Dirt Shield',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel,
+                  { use: '2nd Topcoat', product: 'Rain or Shine Elastomeric Dirt Shield',
+                    quantity: 0, divisor: 25, multiplier: 4 } as ProductOptionMainModel
+                ]
+              } as ProductOptionSubModel,
+            ]
+          } as ProductOptionsModel
+        ]
       },
     ];
 

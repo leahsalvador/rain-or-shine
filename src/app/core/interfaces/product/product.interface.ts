@@ -1,6 +1,8 @@
+import { ProductOptionsModel } from './product-options.interface';
 import { ProductColor } from './product-color.interface';
 import { ProductContentModel } from './product-content.interface';
-export interface ProductModel{
+
+export interface ProductModel {
     title: string;
     subtitle ?: string;
     type ?: string;
@@ -14,4 +16,6 @@ export interface ProductModel{
     perLiter?: number;
     suggestion?: any [];
     active ?: boolean;
+    moreThanOneOption ?: boolean;
+    parentOption ?: ProductOptionsModel[];
 }
