@@ -647,7 +647,7 @@ export class ProductService {
         ],
         color: [],
         hasPaintCalculator: true,
-        min: 20,
+        min: 20, 
         max: 25,
         perLiter: 4,
         parentOption: [
