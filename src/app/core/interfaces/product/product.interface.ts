@@ -18,4 +18,5 @@ export interface ProductModel {
     active ?: boolean;
     moreThanOneOption ?: boolean;
     parentOption ?: ProductOptionsModel[];
+    keywords: string;
 }

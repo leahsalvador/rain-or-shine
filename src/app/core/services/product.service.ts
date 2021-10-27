@@ -171,6 +171,7 @@ export class ProductService {
   initOriginal(){
     this.allOriginal = [
       {
+        keywords: 'Topcoats',
         title: 'Classic',
         subtitle: 'Semi-Gloss Topcoat',
         type: 'wall',
@@ -285,6 +286,7 @@ export class ProductService {
         ]
       },
       {
+        keywords: 'Topcoats',
         title: 'Dirt Shield',
         subtitle: 'Semi-Gloss Dirt Resisting Paint',
         type: 'wall',
@@ -400,6 +402,7 @@ export class ProductService {
         ]
       },
       {
+        keywords: 'Topcoats',
         title: 'ElastoFloor',
         subtitle: 'Concrete Floor Paint',
         type: 'floor',
@@ -485,6 +488,7 @@ export class ProductService {
         ]
       },
       {
+        keywords: 'Topcoats',
         title: 'Elastomeric Paint',
         subtitle: 'Factory-Mixed Colorful Protection',
         image: 'assets/products/Original/S-Elastomeric Waterproofing.jpg',
@@ -598,6 +602,7 @@ export class ProductService {
         ]
       },
       {
+        keywords: 'Primers|Plain|Primers Plain|Primers, Plain|Primer Plain|Plain Primer|Primers,Plain',
         title: 'Elasto-Proofer',
         subtitle: 'Anti-Efflorescence Undercoat Primer',
         image: 'assets/products/Original/S-Elasto-Proofer.jpg',
@@ -719,6 +724,7 @@ export class ProductService {
         ]
       },
       {
+        keywords: 'Primers|Textured|Primers, Textured|Primers,Textured|Primers Textured',
         title: 'Elasto-Tex',
         subtitle: 'Textured Water-Based Paint for Interior and Exterior Walls',
         image: 'assets/products/Original/S-Elasto-Tex.jpg',
@@ -817,6 +823,7 @@ export class ProductService {
         ]
       },
       {
+        keywords: 'Colorants',
         title: 'Elasto-Tint',
         subtitle: 'Water-Based Colorants for Tinting',
         image: 'assets/products/Original/S-Elasto-Tint.jpg',
@@ -848,6 +855,7 @@ export class ProductService {
         color: []
       },
       {
+        keywords: 'Topcoats',
         title: 'Fresco',
         subtitle: 'Odorless Anti-Bacterial Paint',
         image: 'assets/products/Original/S-Fresco_Rise&Shine.jpg',
@@ -966,6 +974,7 @@ export class ProductService {
         ]
       },
       {
+        keywords: 'Additives',
         title: 'Fresco Shine Plus',
         subtitle: 'Semi-Gloss Additive for Fresco',
         image: 'assets/products/Original/S-Fresco_ShinePlus.jpg',
@@ -990,6 +999,7 @@ export class ProductService {
         color: []
       },
       {
+        keywords: 'Topcoats',
         title: 'Hi-Gloss',
         subtitle: 'Diamond Shine',
         type: 'wall',
@@ -1119,6 +1129,7 @@ export class ProductService {
         ]
       },
       {
+        keywords: 'Putty',
         title: 'Mastic Putty',
         subtitle: 'Water-Based Elastomeric Putty',
         image: 'assets/products/Original/S-Mastic Putty.jpg',
@@ -1247,6 +1258,7 @@ export class ProductService {
         ]
       },
       {
+        keywords: 'Primers|Plain|Primers Plain|Primers, Plain|Primer Plain|Plain Primer|Primers,Plain',
         title: 'Prepa-White',
         subtitle: 'Extra Hiding Water-Based Primer',
         image: 'assets/products/Original/S-Prepa-White.jpg',
@@ -1367,6 +1379,7 @@ export class ProductService {
         ]
       },
       {
+        keywords: 'Putty',
         title: 'Power Putty',
         subtitle: 'High Quality and Heavy Duty Full Body Elastomeric Putty',
         image: 'assets/products/Original/S-Power Putty.jpg',
@@ -1495,6 +1508,7 @@ export class ProductService {
         ]
       },
       {
+        keywords: 'Topcoats',
         title: 'Sun Roof',
         subtitle: 'Elastomeric Gloss Roof Paint',
         type: 'roof',
@@ -1590,6 +1604,7 @@ export class ProductService {
         ]
       },
       {
+        keywords: 'Topcoats',
         title: 'Top White',
         subtitle: 'Durable Elastomeric Top Coat',
         image: 'assets/products/Original/S-Top White.jpg',
@@ -1720,6 +1735,7 @@ export class ProductService {
         ]
       },
       {
+        keywords: 'Additives',
         title: 'Xtra Gloss',
         subtitle: 'Semi-Gloss Additive for Rain or Shine Paint',
         image: 'assets/products/Original/S-Xtra Gloss.jpg',
@@ -2050,6 +2066,7 @@ export class ProductService {
   initPaintAndSeal(){
     this.allPaintAndSeal = [
       {
+        keywords: 'Primer & Topcoat - Plain|Topcoat Plain',
         title: 'Deck Seal',
         subtitle: 'Roof Deck Sealer',
         type: 'floor',
@@ -2129,6 +2146,7 @@ export class ProductService {
         ]
       },
       {
+        keywords: 'Primer & Topcoat - Plain|Topcoat Plain',
         title: 'Hydro Lock',
         subtitle: 'Superior Water proofer, Negative and Positive Pressure',
         type: 'wall',
@@ -2194,6 +2212,7 @@ export class ProductService {
         ]
       },
       {
+        keywords: 'Primer & Topcoat - Plain|Topcoat Plain',
         title: 'Roof Mastic',
         subtitle: 'Paint and Sealant in One',
         type: 'roof',
@@ -2297,6 +2316,7 @@ export class ProductService {
         ]
       },
       {
+        keywords: 'Primer & Topcoat - Plain|Topcoat Plain',
         title: 'Wall Mastic',
         subtitle: 'Extreme Waterproofing Paint',
         type: 'wall',
@@ -2418,6 +2438,7 @@ export class ProductService {
   initSista(){
     this.allSista = [
       {
+        keywords: '',
         title: 'Sista F130',
         subtitle: 'Elastic Acrylic Sealant',
         image: 'assets/products/Sista/S-F130.jpg',
@@ -2451,6 +2472,7 @@ export class ProductService {
         color: []
       },
       {
+        keywords: '',
         title: 'Sista F134',
         subtitle: 'Highly Elastic Acrylic Sealant',
         image: 'assets/products/Sista/S-F134.jpg',
@@ -2487,6 +2509,7 @@ export class ProductService {
         color: []
       },
       {
+        keywords: '',
         title: 'Sista D100',
         subtitle: 'Premium Acrylic Roof Sealer',
         image: 'assets/products/Sista/S-D100.jpg',
@@ -2523,6 +2546,7 @@ export class ProductService {
         color: []
       },
       {
+        keywords: '',
         title: 'Sista F101 Plus',
         subtitle: '100% Neutral Sanitary Silicone Sealant',
         image: 'assets/products/Sista/S-F101.jpg',
@@ -2557,6 +2581,7 @@ export class ProductService {
         color: []
       },
       {
+        keywords: '',
         title: 'Sista F109',
         subtitle: 'Multipurpose Silicon Sealant',
         image: 'assets/products/Sista/S-F109.jpg',
@@ -2596,6 +2621,7 @@ export class ProductService {
         color: []
       },
       {
+        keywords: '',
         title: 'Sista Polymer Sealant Sausage',
         subtitle: 'High Performance Modified Polymer Elastic Sealant',
         image: 'assets/products/Sista/S-Polymer.jpg',
@@ -2636,6 +2662,7 @@ export class ProductService {
       },
       
       {
+        keywords: '',
         title: 'Sista PU Foam',
         subtitle: 'Multipurpose Sealing and Insulating Foam',
         image: 'assets/products/Sista/M525.jpg',
@@ -2683,6 +2710,7 @@ export class ProductService {
         color: []
       },
       {
+        keywords: '',
         title: 'Sista Re-New',
         subtitle: 'Silicone Sealant Makes Joints Like New',
         image: 'assets/products/Sista/S-Renew.jpg',
@@ -2723,6 +2751,7 @@ export class ProductService {
         color: []
       },
       {
+        keywords: '',
         title: 'Sista Smart Sealing Tape',
         subtitle: 'Bitumen Waterproof Seal Tape',
         image: 'assets/products/Sista/S-Sealing Paint.jpg',

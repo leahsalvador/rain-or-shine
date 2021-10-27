@@ -1,3 +1,4 @@
+import { ProductModel } from './../../core/interfaces/product/product.interface';
 import { ColorViewModalPage } from './../../color-view-modal/color-view-modal.page';
 import { ColorCollectionModel } from './../../core/interfaces/color-colleciton.interface';
 import { NavController, ModalController } from '@ionic/angular';
@@ -30,8 +31,9 @@ export class SearchPagePage implements OnInit {
 
   checkProductSearch(product: any){
     return (
-      (product.title.toLowerCase().indexOf(this.searchText.toLowerCase().trim()) !== -1 || 
-      product.subtitle.toLowerCase().indexOf(this.searchText.toLowerCase().trim()) !== -1) 
+      (product.title.toLowerCase().indexOf(this.searchText.toLowerCase().trim()) !== -1 ||
+      product.keywords.toLowerCase().indexOf(this.searchText.toLowerCase().trim()) !== -1 ||
+      product.subtitle.toLowerCase().indexOf(this.searchText.toLowerCase().trim()) !== -1)
     && this.searchText.trim().length > 2);
   }
   checkColorSearch(color: any){
